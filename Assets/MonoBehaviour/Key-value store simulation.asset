@@ -1,0 +1,631 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a2f797ba249333596735cb9029d11f, type: 3}
+  m_Name: Key-value store simulation
+  m_EditorClassIdentifier:
+  changeReason: 0
+  keyValuePairs:
+  - key: experience
+    type: 1
+    isChanged: 0
+    floatValue: 10486210
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 0level
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 150
+    boolValue: 0
+    foldedOut: 0
+  - key: 0pickedUP
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 3
+    boolValue: 0
+    foldedOut: 0
+  - key: 0died
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 15
+    boolValue: 0
+    foldedOut: 0
+  - key: 0isopened
+    type: 3
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 1
+    foldedOut: 0
+  - key: 1level
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 150
+    boolValue: 0
+    foldedOut: 0
+  - key: 1pickedUP
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 3
+    boolValue: 0
+    foldedOut: 0
+  - key: 1died
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 14
+    boolValue: 0
+    foldedOut: 0
+  - key: 1isopened
+    type: 3
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 1
+    foldedOut: 0
+  - key: 2level
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 150
+    boolValue: 0
+    foldedOut: 0
+  - key: 2pickedUP
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 2died
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 9
+    boolValue: 0
+    foldedOut: 0
+  - key: 2isopened
+    type: 3
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 1
+    foldedOut: 0
+  - key: 3level
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 150
+    boolValue: 0
+    foldedOut: 0
+  - key: 3pickedUP
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 3died
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 9
+    boolValue: 0
+    foldedOut: 0
+  - key: 3isopened
+    type: 3
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 1
+    foldedOut: 0
+  - key: 4level
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 150
+    boolValue: 0
+    foldedOut: 0
+  - key: 4pickedUP
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 4died
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 9
+    boolValue: 0
+    foldedOut: 0
+  - key: 4isopened
+    type: 3
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 1
+    foldedOut: 0
+  - key: 5level
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 150
+    boolValue: 0
+    foldedOut: 0
+  - key: 5pickedUP
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 1
+    boolValue: 0
+    foldedOut: 0
+  - key: 5died
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 7
+    boolValue: 0
+    foldedOut: 0
+  - key: 5isopened
+    type: 3
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 1
+    foldedOut: 0
+  - key: 6level
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 150
+    boolValue: 0
+    foldedOut: 0
+  - key: 6pickedUP
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 2
+    boolValue: 0
+    foldedOut: 0
+  - key: 6died
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 11
+    boolValue: 0
+    foldedOut: 0
+  - key: 6isopened
+    type: 3
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 1
+    foldedOut: 0
+  - key: 0killedtotalZombies
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 2333
+    boolValue: 0
+    foldedOut: 0
+  - key: 0killedcapsuleZombies
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 1killedtotalZombies
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 629
+    boolValue: 0
+    foldedOut: 0
+  - key: 1killedcapsuleZombies
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 2killedtotalZombies
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 120
+    boolValue: 0
+    foldedOut: 0
+  - key: 2killedcapsuleZombies
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 3killedtotalZombies
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 532
+    boolValue: 0
+    foldedOut: 0
+  - key: 3killedcapsuleZombies
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 4killedtotalZombies
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 146
+    boolValue: 0
+    foldedOut: 0
+  - key: 4killedcapsuleZombies
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 5killedtotalZombies
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 37
+    boolValue: 0
+    foldedOut: 0
+  - key: 5killedcapsuleZombies
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 6killedtotalZombies
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 6killedcapsuleZombies
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 0boostercount
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 119
+    boolValue: 0
+    foldedOut: 0
+  - key: 1boostercount
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 3
+    boolValue: 0
+    foldedOut: 0
+  - key: 2boostercount
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 2
+    boolValue: 0
+    foldedOut: 0
+  - key: money
+    type: 1
+    isChanged: 0
+    floatValue: 39576724
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: gamesplayed
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 12
+    boolValue: 0
+    foldedOut: 0
+  - key: totalDamage
+    type: 1
+    isChanged: 0
+    floatValue: 36962356
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: bestscore
+    type: 1
+    isChanged: 0
+    floatValue: 969721
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: starterPackPurchased
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: interstitialAdsKey
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: infinityMultiplierPurchased
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: rewardedBosses
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: allBossesRewarded0
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: allBossesRewarded1
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: Angry PhilStage
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 1
+    boolValue: 0
+    foldedOut: 0
+  - key: Master AntonioStage
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 1
+    boolValue: 0
+    foldedOut: 0
+  - key: Sir ThomasStage
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 1
+    boolValue: 0
+    foldedOut: 0
+  - key: Mad CustomerStage
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 1
+    boolValue: 0
+    foldedOut: 0
+  - key: CarlStage
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: Charles The GreatStage
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: RayStage
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 1
+    boolValue: 0
+    foldedOut: 0
+  - key: Anime HaterStage
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 1
+    boolValue: 0
+    foldedOut: 0
+  - key: Gunter KochStage
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 1
+    boolValue: 0
+    foldedOut: 0
+  - key: Miss FreemanStage
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 1
+    boolValue: 0
+    foldedOut: 0
+  - key: Little TonyStage
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 1
+    boolValue: 0
+    foldedOut: 0
+  - key: Bloody MaryStage
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 1
+    boolValue: 0
+    foldedOut: 0
+  - key: FirstEnterDate
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 7level
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 150
+    boolValue: 0
+    foldedOut: 0
+  - key: 7pickedUP
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 7died
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 6
+    boolValue: 0
+    foldedOut: 0
+  - key: 7isopened
+    type: 3
+    isChanged: 0
+    floatValue: 2158
+    intValue: 0
+    boolValue: 1
+    foldedOut: 0
+  - key: 8level
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 150
+    boolValue: 0
+    foldedOut: 0
+  - key: 8pickedUP
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 8died
+    type: 2
+    isChanged: 0
+    floatValue: 2158
+    intValue: 9
+    boolValue: 0
+    foldedOut: 0
+  - key: 8isopened
+    type: 3
+    isChanged: 0
+    floatValue: 2158
+    intValue: 0
+    boolValue: 1
+    foldedOut: 0
+  - key: arenaRating
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 775
+    boolValue: 0
+    foldedOut: 0
+  - key: School HaterStage
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: Happy ButcherStage
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: NeighbourStage
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 1
+    boolValue: 0
+    foldedOut: 0
+  - key: Sister ScarrieStage
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 0AbilityLevel
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 1
+    boolValue: 0
+    foldedOut: 0
+  - key: 1AbilityLevel
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 2
+    boolValue: 0
+    foldedOut: 0
+  - key: 2AbilityLevel
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 2
+    boolValue: 0
+    foldedOut: 0
+  - key: 3AbilityLevel
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: 4AbilityLevel
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 0
+    boolValue: 0
+    foldedOut: 0
+  - key: gems
+    type: 2
+    isChanged: 0
+    floatValue: 0
+    intValue: 3095
+    boolValue: 0
+    foldedOut: 0

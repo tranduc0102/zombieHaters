@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 290d238687c7531eb78880dfb27b57b8, type: 3}
+  m_Name: MultiplyImages
+  m_EditorClassIdentifier:
+  activeMultiplier:
+  - {fileID: 21300000, guid: f1cb570494e536342a799471495fc845, type: 2}
+  - {fileID: 21300000, guid: 50f0c29849b533a45afc07a29623a758, type: 2}
+  - {fileID: 21300000, guid: da57edc729e9712428bec9108259970f, type: 2}
+  - {fileID: 21300000, guid: dc852548718dd994391cf518540f204a, type: 2}
+  - {fileID: 21300000, guid: ca6bfb41018b8d3408d3a3f21f7f2c52, type: 2}
+  - {fileID: 21300000, guid: f46dd11ed86466e4cbcdac5889cf3306, type: 2}
+  - {fileID: 21300000, guid: 419595a9713c4884fa6e4a3e65e11902, type: 2}
+  inactiveMultiplier:
+  - {fileID: 21300000, guid: 032849a4c3b56d84c82f180cb1d756ce, type: 2}
+  - {fileID: 21300000, guid: 47ba28402d342cf4ba74ea1a0486689d, type: 2}
+  - {fileID: 21300000, guid: ebc09bd70e9ef154194a6147167cb61a, type: 2}
+  - {fileID: 21300000, guid: 5ab8711a094131943a38cd5e059943b3, type: 2}
+  secretHat:
+  - {fileID: 21300000, guid: 51936f7beaa2a9f4a839c9ee90d76633, type: 2}
+  - {fileID: 21300000, guid: b2f56c266f14ed94498e47eee956f1db, type: 2}
+  - {fileID: 21300000, guid: 6f044eef488339d468dc343bf67b3289, type: 2}
+  - {fileID: 21300000, guid: 0bf7463f66c2b044083018aa6ce921cd, type: 2}
+  - {fileID: 21300000, guid: c34a80d734a51504385c1cb2d96e32f3, type: 2}
+  - {fileID: 21300000, guid: 8127d474d7dea5d4c9722f6f142e9052, type: 2}
+  dailyPresent:
+  - {fileID: 21300000, guid: 5976deff57a9b354e939c457e05752fe, type: 2}
+  - {fileID: 21300000, guid: 187e2029da654684c9b26bd3bf661668, type: 2}
+  - {fileID: 21300000, guid: c601694333bf29644bc6702820bbebae, type: 2}
+  - {fileID: 21300000, guid: ca9ae68769b64f44dabb681e74b99b2e, type: 2}
+  activeBoosters:
+  - {fileID: 21300000, guid: 86c15f1f5e39af449b968f577fd7137c, type: 2}
+  - {fileID: 21300000, guid: 7d74a21ddac8ce042b8cb3017e8eb01c, type: 2}
+  inactiveBoosters:
+  - {fileID: 21300000, guid: a5426b6d5e450784cb73ec1241b0591d, type: 2}
+  - {fileID: 21300000, guid: d18cdb4c4da6cd840a81e05a7538e7d6, type: 2}
+  plashka:
+  - {fileID: 21300000, guid: bd40117c4aa426e4b9c1eb919b4eb85b, type: 2}
+  - {fileID: 21300000, guid: cdff895f7c5ce05448963fceb759d8ee, type: 2}
+  - {fileID: 21300000, guid: e020bc18740f5a84b94ce1f2207059a0, type: 2}
+  abilitiesUpgradeButtons:
+  - {fileID: 21300000, guid: 2401efb7426fed24fa08c9283dcd4981, type: 2}
+  - {fileID: 21300000, guid: 40c38709d1f61df4eb77565be5171030, type: 2}
+  - {fileID: 21300000, guid: 69dc8b42673fedc47948c7b9e2578c49, type: 2}
+  - {fileID: 21300000, guid: ff0020011b0d5224283786ba8d2acb6a, type: 2}
+  - {fileID: 21300000, guid: fc30b341cbe972e45a330a091f5f6d48, type: 2}
+  leaderboardCups:
+  - {fileID: 21300000, guid: 92037e1fda9bb7b4a94a7a17925513ad, type: 2}
+  - {fileID: 21300000, guid: a0c3ac1e4f1053d4d94e2b28203d2a4f, type: 2}
+  - {fileID: 21300000, guid: 4735a23057e0fe14fab2318cf9ed4075, type: 2}
+  bottomPanelShortInfoIcons:
+  - {fileID: 21300000, guid: 105964485b4f99c4c89a0c285d849db3, type: 2}
+  - {fileID: 21300000, guid: fc7c230d2264a704e8065e04e324d73f, type: 2}
+  - {fileID: 21300000, guid: 06886bb08454e534db27d5bb1e13f340, type: 2}
+  perks:
+  - active: {fileID: 21300000, guid: 820667e25a723274395dcbe719b0c189, type: 2}
+    inactive: {fileID: 21300000, guid: 2eb32a10e81a0c0479dee073efef9e0b, type: 2}
+  - active: {fileID: 21300000, guid: 1ad6456d0e442c641ab3e92c24a7dd20, type: 2}
+    inactive: {fileID: 21300000, guid: 486f458a52d1dd24194618f14ca7fb47, type: 2}
+  - active: {fileID: 21300000, guid: e8539ae2ef26f5443a51a3cc2f290238, type: 2}
+    inactive: {fileID: 21300000, guid: 174e44827714edf43addba3dd9d8ee9f, type: 2}
+  - active: {fileID: 21300000, guid: f02cd4d32a8249b458c4ad53cf8dde8a, type: 2}
+    inactive: {fileID: 21300000, guid: d692eda7223aa984a81480a958688a9f, type: 2}
+  - active: {fileID: 21300000, guid: 105dc4c89fe14d44b85e1df937e5c756, type: 2}
+    inactive: {fileID: 21300000, guid: cba0bdea95ef0ca45a854b41404c79ec, type: 2}
+  - active: {fileID: 21300000, guid: 65dfadc85bc526749af37433e0acd0f5, type: 2}
+    inactive: {fileID: 21300000, guid: e1f0d8c1b2cf27941b790bb6964c9aa1, type: 2}
+  upgrageButtons:
+  - active: {fileID: 21300000, guid: 1891389dbc2366d418024b13513168ef, type: 2}
+    inactive: {fileID: 21300000, guid: 0a51585b28474e04fa1e0c32de965c27, type: 2}
+  - active: {fileID: 21300000, guid: ff0020011b0d5224283786ba8d2acb6a, type: 2}
+    inactive: {fileID: 21300000, guid: fc30b341cbe972e45a330a091f5f6d48, type: 2}
+  - active: {fileID: 21300000, guid: 66160e1a6990c944facd340e6092b58a, type: 2}
+    inactive: {fileID: 21300000, guid: a3cb9be082c150a4fa81f5d6d9108193, type: 2}
+  - active: {fileID: 21300000, guid: 2401efb7426fed24fa08c9283dcd4981, type: 2}
+    inactive: {fileID: 21300000, guid: fc30b341cbe972e45a330a091f5f6d48, type: 2}
+  - active: {fileID: 21300000, guid: 94a7cfb825bb48d4498f22758ee83a51, type: 2}
+    inactive: {fileID: 21300000, guid: fc30b341cbe972e45a330a091f5f6d48, type: 2}
+  - active: {fileID: 21300000, guid: 273d77c0e176dbd4e93c8e626c6488c1, type: 2}
+    inactive: {fileID: 21300000, guid: 906fd8d503d7df94d8ed5040b9c69c22, type: 2}
+  rewardedButtons:
+  - rewardedButton: {fileID: 21300000, guid: ff0020011b0d5224283786ba8d2acb6a, type: 2}
+    videoImage: {fileID: 21300000, guid: 66160e1a6990c944facd340e6092b58a, type: 2}
+  - rewardedButton: {fileID: 21300000, guid: fc30b341cbe972e45a330a091f5f6d48, type: 2}
+    videoImage: {fileID: 21300000, guid: a3cb9be082c150a4fa81f5d6d9108193, type: 2}
+  passiveAbilityIcons:
+  - abilityType: 0
+    images:
+    - {fileID: 21300000, guid: c27fb578a788e5d4f8eb7f09073e3f91, type: 2}
+    - {fileID: 21300000, guid: f32f0bf96b8cefe4ba97fad1845aaa00, type: 2}
+    - {fileID: 21300000, guid: 21b6ba6bd9f195942ade1ee7a7bc84bd, type: 2}
+  - abilityType: 1
+    images:
+    - {fileID: 21300000, guid: 02626b23962a7024aa88bce61c22dd45, type: 2}
+    - {fileID: 21300000, guid: 8ae4e9301bd9e9c46a1d6064101802a9, type: 2}
+    - {fileID: 21300000, guid: 7538f2dc6509a39458cbdfcf4def61ad, type: 2}
+  - abilityType: 2
+    images:
+    - {fileID: 21300000, guid: ca192b1a391cf4943ad7ad3dacec417d, type: 2}
+    - {fileID: 21300000, guid: 5ad0bad32e1ef274f9a8c7745ca15b0d, type: 2}
+    - {fileID: 21300000, guid: ba7115bdc3eda6f47a2ec118596a6380, type: 2}
+  - abilityType: 3
+    images:
+    - {fileID: 21300000, guid: ae4a035a75d70b841913a426f76fa9f4, type: 2}
+    - {fileID: 21300000, guid: 1c30cccde648d774eba70f9a8b5b53ba, type: 2}
+    - {fileID: 21300000, guid: 5b8774065432759499e92fe364ccc237, type: 2}
+  popup:
+    active: {fileID: 21300000, guid: d7930e79fc52b7743857514c5340ea12, type: 2}
+    inactive: {fileID: 21300000, guid: cc38183c9cf3ed44b8ace0aaf1a9dc51, type: 2}
+  nextLocationButton:
+    active: {fileID: 21300000, guid: 436d1064dc28e5a49ba6b6411b2527ae, type: 2}
+    inactive: {fileID: 21300000, guid: 0b45083b4776781478426d56d5439929, type: 2}
+  rateUsStar:
+    active: {fileID: 21300000, guid: 13329f7bfcc44934698e2d2081f03d33, type: 2}
+    inactive: {fileID: 21300000, guid: cefaad2480034964ea97f4fa88069d15, type: 2}
+  arenaRatingCup:
+    active: {fileID: 21300000, guid: ad1e390ec6ecf95498f81fe17317717a, type: 2}
+    inactive: {fileID: 21300000, guid: 07d6374229457d747a86c9caa68d9b1c, type: 2}
+  stripe:
+    active: {fileID: 21300000, guid: bd05c2b51d5d6444596a228673a1f325, type: 2}
+    inactive: {fileID: 21300000, guid: 0f678b908a9738f46b0495db7207fc67, type: 2}
+  crown:
+    active: {fileID: 21300000, guid: 16605c87196caed45864bdf410af3c07, type: 2}
+    inactive: {fileID: 21300000, guid: f015401f6f841464d8b30cfe86e66586, type: 2}
+  leaderboardAchievementsButtons:
+    active: {fileID: 21300000, guid: bd5a6187c748c0f4fa774bab7a646830, type: 2}
+    inactive: {fileID: 21300000, guid: f75662a04a21e31439f40d34acc5eb07, type: 2}
