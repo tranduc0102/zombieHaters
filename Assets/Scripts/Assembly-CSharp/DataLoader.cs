@@ -106,51 +106,61 @@ public class DataLoader : MonoBehaviour
 
 	private void Initialize()
 	{
-		InitializePlayerData();
+        InitializePlayerData();
 		SavePlayerData();
-		FillSurvivorLevels();
 		FillBotsData();
 		FillAchievements();
-		SetExperienceLevels();
+        FillSurvivorLevels();
+        LoadingScene loadingScene = UnityEngine.Object.FindObjectOfType<LoadingScene>();
+        if (loadingScene != null)
+        {
+            loadingScene.StartLoading();
+        }
+        SetExperienceLevels();
 		SetMoneyBoxData();
 		FillZombiesPrefabData();
 		dataUpdateManager = UnityEngine.Object.FindObjectOfType<DataUpdateManager>();
 		notifManger = UnityEngine.Object.FindObjectOfType<NotificationManager>();
 		hidingObjects = null;
-		LoadingScene loadingScene = UnityEngine.Object.FindObjectOfType<LoadingScene>();
-		if (loadingScene != null)
-		{
-			loadingScene.StartLoading();
-        }
     }
 
 	public void InitializePlayerData()
 	{
-		initialized = false;
-		if (!SaveManager.Load(StaticConstants.PlayerSaveDataPath, ref playerData))
+		try
 		{
-			if (playerData == null || (playerData != null && !playerData.CheckNewData()))
-			{
-				PlayerPrefs.DeleteAll();
-				SaveManager.RemoveData(StaticConstants.PlayerSaveDataPath);
-				playerData = new SaveData();
-				playerData.Init();
-				GetNewOpenedHeroes();
-				gui = UnityEngine.Object.FindObjectOfType<GUI>();
-				if (gui != null)
-				{
-					gui.StartTutorialAfterReset();
-				}
-			}
+            initialized = false;
+            if (!SaveManager.Load(StaticConstants.PlayerSaveDataPath, ref playerData))
+            {
+                if (playerData == null || (playerData != null && !playerData.CheckNewData()))
+                {
+                    PlayerPrefs.DeleteAll();
+                    SaveManager.RemoveData(StaticConstants.PlayerSaveDataPath);
+                    playerData = new SaveData();
+                    playerData.Init();
+                    GetNewOpenedHeroes();
+                    gui = UnityEngine.Object.FindObjectOfType<GUI>();
+                    if (gui != null)
+                    {
+                        gui.StartTutorialAfterReset();
+                    }
+                }
+                Debug.Log("X1");
+            }
+            else
+            {
+                playerData.CheckNewData();
+                Debug.Log("X2");
+            }
+            passiveAbilitiesManager.Initialize();
+            Debug.Log("X3");
 		}
-		else
-		{
-			playerData.CheckNewData();
-		}
-		passiveAbilitiesManager.Initialize();
-	}
+        catch (Exception ex)
+        {
+            Debug.LogError("Lỗi InitializePlayerData: " + ex);
+        }
+    }
 
-	public static void SetGui(GUI _gui)
+    public static void SetGui(GUI _gui)
 	{
 		gui = _gui;
 		initialized = true;
@@ -158,114 +168,170 @@ public class DataLoader : MonoBehaviour
 
 	private void FillBotsData()
 	{
-		botsData = new PVPBotsData();
-		string[] array = CsvLoader.SplitLines(pvpBotsData);
-		int[] array2 = new int[9] { 0, 1, 2, 3, 4, 7, 5, 8, 6 };
-		for (int i = 0; i < survivors.Count; i++)
+		try
 		{
-			botsData.botData.Add(new PVPBotsData.BotData
-			{
-				heroType = (SaveData.HeroData.HeroType)array2[i]
-			});
-		}
-		for (int j = 0; j < array.Length; j++)
+            botsData = new PVPBotsData();
+            string[] array = CsvLoader.SplitLines(pvpBotsData);
+            int[] array2 = new int[9] { 0, 1, 2, 3, 4, 7, 5, 8, 6 };
+            for (int i = 0; i < survivors.Count; i++)
+            {
+                botsData.botData.Add(new PVPBotsData.BotData
+                {
+                    heroType = (SaveData.HeroData.HeroType)array2[i]
+                });
+            }
+            for (int j = 0; j < array.Length; j++)
+            {
+                string[] array3 = array[j].Split(',');
+                botsData.arenaRating.Add(int.Parse(array3[0]));
+                botsData.displayedPower.Add(float.Parse(array3[1]));
+                for (int k = 0; k < survivors.Count; k++)
+                {
+                    botsData.botData[k].levels.Add(int.Parse(array3[k + 2]));
+                }
+            }
+        }catch (Exception ex)
 		{
-			string[] array3 = array[j].Split(',');
-			botsData.arenaRating.Add(int.Parse(array3[0]));
-			botsData.displayedPower.Add(float.Parse(array3[1]));
-			for (int k = 0; k < survivors.Count; k++)
-			{
-				botsData.botData[k].levels.Add(int.Parse(array3[k + 2]));
-			}
-		}
+            Debug.LogError("Lỗi FillBotsData: " + ex);
+        }
+        Debug.Log("X7");
     }
 
     private void FillSurvivorLevels()
-	{
-		int[,] array = new int[survivors.Count, playerData.survivorMaxLevel];
-		float[,] array2 = new float[playerData.survivorMaxLevel, survivors.Count];
-		float[,] array3 = new float[playerData.survivorMaxLevel, survivors.Count];
-		float[,] array4 = new float[playerData.survivorMaxLevel, survivors.Count];
-		CsvLoader.SplitText(survivorLevels, ',', ref array);
-		CsvLoader.SplitText(survivorPowers, ',', ref array2);
-		CsvLoader.SplitText(survivorDamage, ',', ref array3);
-		CsvLoader.SplitText(survivorHP, ',', ref array4);
-		int[] array5 = new int[9] { 0, 1, 2, 3, 4, 6, 8, 5, 7 };
-		for (int i = 0; i < survivors.Count; i++)
-		{
-			for (int j = 0; j < array.GetLength(1); j++)
-			{
-				survivors[array5[i]].levels.Add(new Survivors.SurvivorLevels
-				{
-					damage = array3[j, i],
-					cost = array[i, j],
-					power = array2[j, i],
-					hp = array4[j, i]
-				});
-			}
-		}
+    {
+        try
+        {
+            int[,] array = new int[survivors.Count, playerData.survivorMaxLevel];
+            float[,] array2 = new float[playerData.survivorMaxLevel, survivors.Count];
+            float[,] array3 = new float[playerData.survivorMaxLevel, survivors.Count];
+            float[,] array4 = new float[playerData.survivorMaxLevel, survivors.Count];
+            CsvLoader.SplitText(survivorLevels, ',', ref array);
+            CsvLoader.SplitText(survivorPowers, ',', ref array2);
+            CsvLoader.SplitText(survivorDamage, ',', ref array3);
+            CsvLoader.SplitText(survivorHP, ',', ref array4);
+            int[] array5 = new int[9] { 0, 1, 2, 3, 4, 6, 8, 5, 7 };
+            for (int i = 0; i < survivors.Count; i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    survivors[array5[i]].levels.Add(new Survivors.SurvivorLevels
+                    {
+                        damage = array3[j, i],
+                        cost = array[i, j],
+                        power = array2[j, i],
+                        hp = array4[j, i]
+                    });
+                }
+            }
+            Debug.Log("X6");
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError("Lỗi FillSurvivorLevels: " + ex);
+        }
     }
 
     public void SavePlayerData()
 	{
-		if (playerData != null)
+		try
 		{
-			SaveManager.Save(playerData, StaticConstants.PlayerSaveDataPath);
-			if (initialized)
-			{
-				IOSCloudSave.instance.SaveAll();
-				GPGSCloudSave.CloudSync(false);
+            if (playerData != null)
+            {
+                SaveManager.Save(playerData, StaticConstants.PlayerSaveDataPath);
+                if (initialized)
+                {
+                    IOSCloudSave.instance.SaveAll();
+                    GPGSCloudSave.CloudSync(false);
+                    Debug.Log("X4");
+                }
+                Debug.Log("X5");
             }
+		}
+		catch(Exception ex)
+		{
+            Debug.LogError("Lỗi SavePlayerData: " + ex);
         }
     }
 
-    private void FillAchievements()
+	private void FillAchievements()
 	{
-		string[] array = CsvLoader.SplitLines(achievementData);
-		for (int i = 0; i < achievements.Count; i++)
+		try
 		{
-			string[] array2 = array[i].Split(';');
-			achievements[i].ID = int.Parse(array2[0]);
-			achievements[i].name = array2[1];
-			achievements[i].description = array2[2];
-			achievements[i].type = int.Parse(array2[3]);
-			achievements[i].count = int.Parse(array2[4]);
-			achievements[i].reward = int.Parse(array2[5]);
+			string[] array = CsvLoader.SplitLines(achievementData);
+			for (int i = 0; i < achievements.Count; i++)
+			{
+				string[] array2 = array[i].Split(';');
+				achievements[i].ID = int.Parse(array2[0]);
+				achievements[i].name = array2[1];
+				achievements[i].description = array2[2];
+				achievements[i].type = int.Parse(array2[3]);
+				achievements[i].count = int.Parse(array2[4]);
+				achievements[i].reward = int.Parse(array2[5]);
+			}
+			Debug.Log("X8");
 		}
-    }
+        catch (Exception ex)
+        {
+            Debug.LogError("Lỗi FillAchievements: " + ex);
+        }
 
+    }
     private void SetExperienceLevels()
 	{
-		CsvLoader.SplitText<double>(experienceData, ',', out levelExperience);
+		try
+		{
+            CsvLoader.SplitText<double>(experienceData, ',', out levelExperience);
+            Debug.Log("X10");
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError("Lỗi SetExperienceLevels: " + ex);
+        }
     }
 
     private void SetMoneyBoxData()
 	{
-		CsvLoader.SplitText<float>(moneyBoxData, ',', out moneyBoxGold);
-		if (playerData.moneyBoxPicked >= moneyBoxGold.Length - 1)
+		try
 		{
-			playerData.moneyBoxPicked -= 5;
-		}
+            CsvLoader.SplitText<float>(moneyBoxData, ',', out moneyBoxGold);
+            if (playerData.moneyBoxPicked >= moneyBoxGold.Length - 1)
+            {
+                playerData.moneyBoxPicked -= 5;
+            }
+            Debug.Log("X11");
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError("Lỗi SetMoneyBoxData: " + ex);
+        }
     }
 
     private void FillZombiesPrefabData()
 	{
-		string[] array = CsvLoader.SplitLines(Resources.Load<TextAsset>("ZombiesInfoCSV"));
-		if (array.Length != zombiesPrefabs.Count)
+		try
 		{
-			Debug.LogError("CSV data and prefabs count don't match. CSV: " + array.Length + " Prefabs: " + zombiesPrefabs.Count);
-			return;
-		}
-		for (int i = 0; i < array.Length; i++)
-		{
-			string[] array2 = array[i].Split(',');
-			zombiesPrefabs[i].zombieType = (SaveData.ZombieData.ZombieType)int.Parse(array2[2]);
-			zombiesPrefabs[i].countHealth = float.Parse(array2[0]);
-			zombiesPrefabs[i].damage = int.Parse(array2[1]);
-			zombiesPrefabs[i].power = zombiesPrefabs[i].countHealth / StaticConstants.ZombiePowerConst;
-		}
-		zombiesPrefabs.Clear();
-		zombiesPrefabs = null;
+            string[] array = CsvLoader.SplitLines(Resources.Load<TextAsset>("ZombiesInfoCSV"));
+            if (array.Length != zombiesPrefabs.Count)
+            {
+                Debug.LogError("CSV data and prefabs count don't match. CSV: " + array.Length + " Prefabs: " + zombiesPrefabs.Count);
+                return;
+            }
+            for (int i = 0; i < array.Length; i++)
+            {
+                string[] array2 = array[i].Split(',');
+                zombiesPrefabs[i].zombieType = (SaveData.ZombieData.ZombieType)int.Parse(array2[2]);
+                zombiesPrefabs[i].countHealth = float.Parse(array2[0]);
+                zombiesPrefabs[i].damage = int.Parse(array2[1]);
+                zombiesPrefabs[i].power = zombiesPrefabs[i].countHealth / StaticConstants.ZombiePowerConst;
+            }
+            zombiesPrefabs.Clear();
+            zombiesPrefabs = null;
+            Debug.Log("X12");
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError("Lỗi FillZombiesPrefabData: " + ex);
+        }
     }
 
     private void SetZombiePrefabData()

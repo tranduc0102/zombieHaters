@@ -16,13 +16,14 @@ public class Test : MonoBehaviour
 
 	public void RefreshJoystickDirection()
 	{
-		if (Application.isEditor)
+        joystickDirection = new Vector3(CrossPlatformInputManager.GetAxis("Horizontal"), 0f, CrossPlatformInputManager.GetAxis("Vertical"));
+       /* if (Application.isEditor)
 		{
 			joystickDirection = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
 		}
 		else
 		{
-			joystickDirection = new Vector3(CrossPlatformInputManager.GetAxis("Horizontal"), 0f, CrossPlatformInputManager.GetAxis("Vertical"));
-		}
+		
+		}*/
 	}
 }
