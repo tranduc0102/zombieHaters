@@ -925,6 +925,10 @@ public class GUI : MonoBehaviour
 			progressToBossFx.Play();
 			fillBossHealth.transform.parent.gameObject.SetActive(true);
 		}
+		else
+		{
+			fillBossHealth.transform.parent.gameObject.SetActive(false);
+		}
 		topPanelAnimator.SetBool("BossInDaHause", bossInDaHause);
 	}
 
