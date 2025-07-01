@@ -103,7 +103,6 @@ public class DataLoader : MonoBehaviour
 		Initialize();
 		Application.targetFrameRate = 60;
 	}
-
 	private void Initialize()
 	{
         InitializePlayerData();
@@ -144,19 +143,16 @@ public class DataLoader : MonoBehaviour
                         gui.StartTutorialAfterReset();
                     }
                 }
-                Debug.Log("X1");
             }
             else
             {
                 playerData.CheckNewData();
-                Debug.Log("X2");
             }
             passiveAbilitiesManager.Initialize();
-            Debug.Log("X3");
 		}
         catch (Exception ex)
         {
-            Debug.LogError("Lỗi InitializePlayerData: " + ex);
+	        Debug.LogError("Lỗi InitializePlayerData: " + ex);
         }
     }
 
@@ -192,9 +188,8 @@ public class DataLoader : MonoBehaviour
             }
         }catch (Exception ex)
 		{
-            Debug.LogError("Lỗi FillBotsData: " + ex);
+			Debug.LogError("Lỗi FillBotsData: " + ex);
         }
-        Debug.Log("X7");
     }
 
     private void FillSurvivorLevels()
@@ -223,11 +218,10 @@ public class DataLoader : MonoBehaviour
                     });
                 }
             }
-            Debug.Log("X6");
         }
         catch (System.Exception ex)
         {
-            Debug.LogError("Lỗi FillSurvivorLevels: " + ex);
+	       Debug.LogError("Lỗi FillSurvivorLevels: " + ex);
         }
     }
 
@@ -242,14 +236,12 @@ public class DataLoader : MonoBehaviour
                 {
                     IOSCloudSave.instance.SaveAll();
                     GPGSCloudSave.CloudSync(false);
-                    Debug.Log("X4");
                 }
-                Debug.Log("X5");
             }
 		}
 		catch(Exception ex)
 		{
-            Debug.LogError("Lỗi SavePlayerData: " + ex);
+			Debug.LogError("Lỗi SavePlayerData: " + ex);
         }
     }
 
@@ -268,11 +260,10 @@ public class DataLoader : MonoBehaviour
 				achievements[i].count = int.Parse(array2[4]);
 				achievements[i].reward = int.Parse(array2[5]);
 			}
-			Debug.Log("X8");
 		}
         catch (Exception ex)
         {
-            Debug.LogError("Lỗi FillAchievements: " + ex);
+	        Debug.LogError("Lỗi FillAchievements: " + ex);
         }
 
     }
@@ -281,11 +272,10 @@ public class DataLoader : MonoBehaviour
 		try
 		{
             CsvLoader.SplitText<double>(experienceData, ',', out levelExperience);
-            Debug.Log("X10");
         }
         catch (Exception ex)
         {
-            Debug.LogError("Lỗi SetExperienceLevels: " + ex);
+	        Debug.LogError("Lỗi SetExperienceLevels: " + ex);
         }
     }
 
@@ -298,11 +288,10 @@ public class DataLoader : MonoBehaviour
             {
                 playerData.moneyBoxPicked -= 5;
             }
-            Debug.Log("X11");
         }
         catch (Exception ex)
         {
-            Debug.LogError("Lỗi SetMoneyBoxData: " + ex);
+	        Debug.LogError("Lỗi SetMoneyBoxData: " + ex);
         }
     }
 
@@ -313,7 +302,7 @@ public class DataLoader : MonoBehaviour
             string[] array = CsvLoader.SplitLines(Resources.Load<TextAsset>("ZombiesInfoCSV"));
             if (array.Length != zombiesPrefabs.Count)
             {
-                Debug.LogError("CSV data and prefabs count don't match. CSV: " + array.Length + " Prefabs: " + zombiesPrefabs.Count);
+	            Debug.LogError("CSV data and prefabs count don't match. CSV: " + array.Length + " Prefabs: " + zombiesPrefabs.Count);
                 return;
             }
             for (int i = 0; i < array.Length; i++)
@@ -326,11 +315,10 @@ public class DataLoader : MonoBehaviour
             }
             zombiesPrefabs.Clear();
             zombiesPrefabs = null;
-            Debug.Log("X12");
         }
         catch (Exception ex)
         {
-            Debug.LogError("Lỗi FillZombiesPrefabData: " + ex);
+	        Debug.LogError("Lỗi FillZombiesPrefabData: " + ex);
         }
     }
 

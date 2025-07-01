@@ -7,6 +7,23 @@ using TMPro;
 public class UILogger : MonoBehaviour
 {
     private static UILogger _instance;
+    public static UILogger Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<UILogger>();
+                if (_instance == null)
+                {
+                    GameObject obj = new GameObject();
+                    _instance = obj.AddComponent<UILogger>();
+                }
+                DontDestroyOnLoad(_instance.gameObject);
+            }
+            return _instance;
+        }
+    }
     public Text _uiText;
 #if TMP_PRESENT
     private TMP_Text _tmpText;
@@ -15,20 +32,12 @@ public class UILogger : MonoBehaviour
     private const string LoggerObjectName = "UILoggerCanvas";
     public ScrollRect _scrollRect;
     public Canvas canvas;
+    public InputField input;
 
     void Awake()
     {
-        if (_instance == null)
-        {
-            _instance = this;
-            DontDestroyOnLoad(gameObject);
-            InitUI();
-            Application.logMessageReceived += HandleLog;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        InitUI();
+        Application.logMessageReceived += HandleLog;
     }
 
     private void OnDestroy()
@@ -79,14 +88,13 @@ public class UILogger : MonoBehaviour
         _uiText.verticalOverflow = VerticalWrapMode.Overflow;
 #endif
         
-        // Setup ScrollRect
         _scrollRect.viewport = viewportRect;
         _scrollRect.horizontal = false;
         _scrollRect.vertical = true;
         _scrollRect.scrollSensitivity = 10f;
     }
 
-    public static void Log(string message)
+    public void Log(string message)
     {
         if (_instance == null)
         {
@@ -133,8 +141,11 @@ public class UILogger : MonoBehaviour
     public void Show()
     {
         scrollViewObj.SetActive(true);
+        input.gameObject.SetActive(false);
     }
     public void Hide() {
         scrollViewObj.SetActive(false);
+        input.gameObject.SetActive(true);
+        input.text = _uiText.text;
     }
 } 

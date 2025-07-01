@@ -125,7 +125,7 @@ public class LeaderboardManager : MonoBehaviour
 
 	public void PostScoreOnLeaderBoard(long myScore)
 	{
-		if (loginSuccessful)
+		/*if (loginSuccessful)
 		{
 			Social.ReportScore(myScore, leaderboardID, delegate(bool success)
 			{
@@ -161,7 +161,7 @@ public class LeaderboardManager : MonoBehaviour
 				Debug.Log("Authentication failed");
 				GPGSCloudSave.syncWithCloud = true;
 			}
-		});
+		});*/
 	}
 
 	public void ShowLeaderboard()
