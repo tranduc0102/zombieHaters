@@ -9,7 +9,7 @@ namespace Spine.Unity.Examples
 		[SpineBone("", "skeletonAnimation", true, false)]
 		public string boneName;
 
-		public Camera camera;
+        public new Camera camera;
 
 		private Bone bone;
 

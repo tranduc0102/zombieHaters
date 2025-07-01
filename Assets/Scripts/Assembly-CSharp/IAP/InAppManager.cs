@@ -45,7 +45,7 @@ namespace IAP
 			Instance = this;
 		}
 
-		private void Start()
+        private void Start()
 		{
 			if (m_StoreController == null)
 			{
@@ -90,7 +90,7 @@ namespace IAP
 			}
 		}
 
-		public void InitializePurchasing()
+        public void InitializePurchasing()
 		{
 			if (!IsInitialized())
 			{
@@ -104,7 +104,7 @@ namespace IAP
 				lastIndex = SetPurchase(subscription, builder, lastIndex);
 				lastIndex = SetPurchase(starterPack, builder, lastIndex);
 				lastIndex = SetPurchase(infinityMultiplier, builder, lastIndex);
-				UnityPurchasing.Initialize(this, builder);
+                UnityPurchasing.Initialize(this, builder);
 			}
 		}
 
@@ -179,7 +179,7 @@ namespace IAP
 			return m_StoreController != null && m_StoreExtensionProvider != null;
 		}
 
-		public void BuyProductID(int productIndex)
+        public void BuyProductID(int productIndex)
 		{
 			if (IsInitialized())
 			{

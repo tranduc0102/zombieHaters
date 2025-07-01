@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
+using static WavesManager;
 
 public class UIBossCell : MonoBehaviour
 {
@@ -116,8 +118,8 @@ public class UIBossCell : MonoBehaviour
 	{
 		float num = 2f * UIController.instance.scrollControllers.wantedListController.bossCameraPrefab.orthographicSize * UIController.instance.scrollControllers.survivorsController.heroCamPrefab.aspect + 1f;
 		Camera camera = Object.Instantiate(UIController.instance.scrollControllers.wantedListController.bossCameraPrefab, new Vector3(10000f + (float)index * (num * 2f), 0f, 0f), Quaternion.identity, TransformParentManager.Instance.bossList);
-		GameObject gameObject = Object.Instantiate(boss.prefabBoss.gameObject, camera.transform.GetChild(0));
-		Component[] components = gameObject.gameObject.GetComponents<Component>();
+        GameObject gameObject = Object.Instantiate(boss.prefabBoss.gameObject, camera.transform.GetChild(0));
+        Component[] components = gameObject.gameObject.GetComponents<Component>();
 		foreach (Component component in components)
 		{
 			if (!(component is Transform))

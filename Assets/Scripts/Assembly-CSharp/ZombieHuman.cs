@@ -55,7 +55,9 @@ public class ZombieHuman : BaseHuman
 		{
 			Object.Instantiate(GameManager.instance.prefabRareGlowFx, base.transform);
 		}
-		if (GameManager.instance.currentGameMode == GameManager.GameModes.Idle)
+		navAgent.enabled = true;
+
+        if (GameManager.instance.currentGameMode == GameManager.GameModes.Idle)
 		{
 			defaultSpeed = navAgent.speed / 1.5f;
 		}

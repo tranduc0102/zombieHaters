@@ -91,7 +91,7 @@ public class DataLoader : MonoBehaviour
 
 	public static DataLoader Instance { get; private set; }
 
-	private void Awake()
+    private void Awake()
 	{
 		if (Instance != null && Instance != this)
 		{
@@ -103,7 +103,7 @@ public class DataLoader : MonoBehaviour
 		Initialize();
 		Application.targetFrameRate = 60;
 	}
-	private void Initialize()
+    private void Initialize()
 	{
         InitializePlayerData();
 		SavePlayerData();
@@ -123,7 +123,7 @@ public class DataLoader : MonoBehaviour
 		}
     }
 
-	public void InitializePlayerData()
+    public void InitializePlayerData()
 	{
 		try
 		{
@@ -162,7 +162,7 @@ public class DataLoader : MonoBehaviour
 		initialized = true;
 	}
 
-	private void FillBotsData()
+    private void FillBotsData()
 	{
 		try
 		{
@@ -245,7 +245,7 @@ public class DataLoader : MonoBehaviour
         }
     }
 
-	private void FillAchievements()
+    private void FillAchievements()
 	{
 		try
 		{
@@ -331,7 +331,7 @@ public class DataLoader : MonoBehaviour
 		}
 	}
 
-	public bool OpenHero(SaveData.HeroData.HeroType heroType)
+    public bool OpenHero(SaveData.HeroData.HeroType heroType)
 	{
 		int index = playerData.heroData.IndexOf(playerData.heroData.First((SaveData.HeroData hd) => hd.heroType == heroType));
 		if (playerData.heroData[index].isOpened)
@@ -349,7 +349,7 @@ public class DataLoader : MonoBehaviour
 		return true;
 	}
 
-	public void RefreshIdleZombieGold(double money, bool needToSave = false)
+    public void RefreshIdleZombieGold(double money, bool needToSave = false)
 	{
 		money *= (double)((!InAppManager.Instance.IsSubscribed()) ? 1f : 1.5f);
 		if (money < 1.0)
@@ -521,7 +521,7 @@ public class DataLoader : MonoBehaviour
 		return playerData.heroData.First((SaveData.HeroData hd) => hd.heroType == heroType).isOpened;
 	}
 
-	public void SetPlayerLevel(int level)
+    public void SetPlayerLevel(int level)
 	{
 		playerData.experience = levelExperience[level - 1];
 		SavePlayerData();
@@ -533,7 +533,7 @@ public class DataLoader : MonoBehaviour
 		gui.UpdateMoney(inGameMoneyCounter);
 	}
 
-	public void ResetInGameMoneyCounter()
+    public void ResetInGameMoneyCounter()
 	{
 		inGameMoneyCounter = 0.0;
 		gui.UpdateMoney(inGameMoneyCounter);
@@ -563,12 +563,12 @@ public class DataLoader : MonoBehaviour
 		return num;
 	}
 
-	public void AddPickedUpCount(SaveData.HeroData.HeroType type)
+    public void AddPickedUpCount(SaveData.HeroData.HeroType type)
 	{
 		pickedSurvivors[(int)type]++;
 	}
 
-	public void SaveDeadByCapsule(SaveData.ZombieData.ZombieType type)
+    public void SaveDeadByCapsule(SaveData.ZombieData.ZombieType type)
 	{
 		killedZombieCapsule[(int)type]++;
 	}
@@ -604,7 +604,7 @@ public class DataLoader : MonoBehaviour
 		return SaveDeadZombie(SaveData.ZombieData.ZombieType.BOSS, ((!(_name == "Angry Phil")) ? power : (power * 6f)) * StaticConstants.BossZombieMultiplier);
 	}
 
-	public void SaveEndMatchInfo()
+    public void SaveEndMatchInfo()
 	{
 		double num = 0.0;
 		int num2 = 0;
@@ -658,7 +658,7 @@ public class DataLoader : MonoBehaviour
 		SavePlayerData();
 	}
 
-	public void ResetLocalInfo()
+    public void ResetLocalInfo()
 	{
 		UpdateIdleHeroDamage();
 		killedZombies = new List<KilledZombies>();
@@ -669,7 +669,7 @@ public class DataLoader : MonoBehaviour
 		gui.isnewHeroOpened = false;
 	}
 
-	public void UpdateIdleHeroDamage()
+    public void UpdateIdleHeroDamage()
 	{
 		if (GameManager.instance.currentGameMode != GameManager.GameModes.PVP)
 		{
@@ -681,7 +681,7 @@ public class DataLoader : MonoBehaviour
 		}
 	}
 
-	public void UpdateIdleHeroShootDelay()
+    public void UpdateIdleHeroShootDelay()
 	{
 		if (GameManager.instance.currentGameMode != GameManager.GameModes.PVP)
 		{
@@ -693,7 +693,7 @@ public class DataLoader : MonoBehaviour
 		}
 	}
 
-	public void UpdateIdleHero(SaveData.HeroData.HeroType type)
+    public void UpdateIdleHero(SaveData.HeroData.HeroType type)
 	{
 		Transform parent = null;
 		SurvivorHuman[] array = UnityEngine.Object.FindObjectsOfType<SurvivorHuman>();
@@ -710,7 +710,7 @@ public class DataLoader : MonoBehaviour
 		UnityEngine.Object.Destroy(particleSystem.gameObject, particleSystem.main.duration);
 	}
 
-	public void SetNewMultiplier(int multiplier, int durationInSeconds)
+    public void SetNewMultiplier(int multiplier, int durationInSeconds)
 	{
 		if (TimeManager.gotDateTime)
 		{
@@ -724,7 +724,7 @@ public class DataLoader : MonoBehaviour
 		}
 	}
 
-	public void SetTotalDays(int value, bool needToSave = false)
+    public void SetTotalDays(int value, bool needToSave = false)
 	{
 		SaveData saveData = playerData;
 		saveData.totalDaysInRow = value;
@@ -761,7 +761,7 @@ public class DataLoader : MonoBehaviour
 		return default(TimeSpan);
 	}
 
-	public void SavePickedMoneyBox(Vector3 position)
+    public void SavePickedMoneyBox(Vector3 position)
 	{
 		if (TimeManager.gotDateTime)
 		{
@@ -785,7 +785,7 @@ public class DataLoader : MonoBehaviour
 		}
 	}
 
-	public void CheckClosedWalls()
+    public void CheckClosedWalls()
 	{
 		int currentPlayerLevel = GetCurrentPlayerLevel();
 		ClosedWall[] array = UnityEngine.Object.FindObjectsOfType<ClosedWall>();
@@ -800,12 +800,12 @@ public class DataLoader : MonoBehaviour
 		}
 	}
 
-	public void GetHidingObjects()
+    public void GetHidingObjects()
 	{
 		hidingObjects = UnityEngine.Object.FindObjectsOfType<HidingObject>();
 	}
 
-	public void UpdateClosedWallsText()
+    public void UpdateClosedWallsText()
 	{
 		ClosedWall[] array = UnityEngine.Object.FindObjectsOfType<ClosedWall>();
 		for (int i = 0; i < array.Length; i++)
@@ -814,7 +814,7 @@ public class DataLoader : MonoBehaviour
 		}
 	}
 
-	public void BuyBoosters(SaveData.BoostersData.BoosterType boosterType, int amount = 1)
+    public void BuyBoosters(SaveData.BoostersData.BoosterType boosterType, int amount = 1)
 	{
 		for (int i = 0; i < playerData.boosters.Count; i++)
 		{

@@ -84,14 +84,14 @@ public class DataUpdateManager : MonoBehaviour
 				yield break;
 			}
 			DataLoader.Instance.moneyMultiplier = 1;
-			DataLoader.gui.videoMultiplier.redCircle.SetActive(true);
-			DataLoader.gui.videoAnim.SetBool("IsOpened", true);
-		}
+			//DataLoader.gui.videoMultiplier.redCircle.SetActive(true);
+/*			DataLoader.gui.videoAnim.SetBool("IsOpened", true);
+*/		}
 		else
 		{
 			firstUpdateCompleted = true;
-			DataLoader.gui.videoAnim.SetBool("IsOpened", true);
-			DataLoader.Instance.moneyMultiplier = 1;
+/*			DataLoader.gui.videoAnim.SetBool("IsOpened", true);
+*/			DataLoader.Instance.moneyMultiplier = 1;
 			DataLoader.gui.videoMultiplier.popupTimeLeftText.text = "00:00:00";
 			DataLoader.gui.videoMultiplier.redCircle.SetActive(true);
 			if (PlayerPrefs.HasKey(StaticConstants.infinityMultiplierPurchased))
@@ -110,8 +110,8 @@ public class DataUpdateManager : MonoBehaviour
 
 	private IEnumerator MoneyMultiplier(TimeSpan time)
 	{
-		DataLoader.gui.videoAnim.SetBool("IsOpened", false);
-		DataLoader.gui.multiplierAnim.SetBool("IsOpened", true);
+		//DataLoader.gui.videoAnim.SetBool("IsOpened", false);
+		//DataLoader.gui.multiplierAnim.SetBool("IsOpened", true);
 		TimeSpan prevSpan = GetTimeSpan(DataLoader.gui.videoMultiplier.popupTimeLeftText.text);
 		int addedMinutes = StaticConstants.MultiplierDurationInSeconds / 60;
 		float speed = 0.05f;
@@ -143,9 +143,9 @@ public class DataUpdateManager : MonoBehaviour
 			Debug.LogWarning("MULTIPLIER 1");
 		}
 		DataLoader.gui.videoMultiplier.redCircle.SetActive(true);
-		DataLoader.gui.videoAnim.SetBool("IsOpened", true);
+		//DataLoader.gui.videoAnim.SetBool("IsOpened", true);
 		yield return new WaitForSeconds(0.5f);
-		DataLoader.gui.multiplierAnim.SetBool("IsOpened", false);
+		//DataLoader.gui.multiplierAnim.SetBool("IsOpened", false);
 		DataLoader.gui.videoMultiplier.popupTimeLeftText.text = "00:00:00";
 		DataLoader.Instance.moneyMultiplier = 1;
 		PlayerPrefs.SetInt(StaticConstants.MultiplierKey, 1);

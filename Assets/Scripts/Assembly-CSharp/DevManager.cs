@@ -207,7 +207,7 @@ public class DevManager : MonoBehaviour
 		ArenaManager.instance.SaveArenaRating(rating);
 	}
 
-	public void BuySubscription()
+    public void BuySubscription()
 	{
 		InAppManager.Instance.BuyProductID(InAppManager.Instance.subscription.index);
 	}

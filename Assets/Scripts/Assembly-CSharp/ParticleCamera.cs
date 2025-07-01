@@ -3,7 +3,7 @@ using GUI = GuiInGame.GUI;
 
 public class ParticleCamera : MonoBehaviour
 {
-	public Camera camera;
+    public new Camera camera;
 
 	private RectTransform canvas;
 

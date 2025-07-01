@@ -21,7 +21,7 @@ public class AnalyticsManager : MonoBehaviour
 	private string _appsFlyerDevKey = string.Empty;
 
 	[SerializeField]
-	private string trafficIdIOS = "864";
+    private string trafficIdIOS = "864";
 
 	[SerializeField]
 	private string trafficIdAndroid = "863";

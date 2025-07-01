@@ -100,7 +100,7 @@ public class HeroInfo : MonoBehaviour
 
 	private Coroutine getPriceCor;
 
-	public void SetContent(int survivorIndex, Texture texture, bool isLocked, SurviviorContent content)
+    public void SetContent(int survivorIndex, Texture texture, bool isLocked, SurviviorContent content)
 	{
 		rawImage.texture = texture;
 		surviviorContent = content;
@@ -115,7 +115,7 @@ public class HeroInfo : MonoBehaviour
 		this.survivorIndex = survivorIndex;
 	}
 
-	public void SetIsLocked(bool isLocked)
+    public void SetIsLocked(bool isLocked)
 	{
 		if (isLocked)
 		{
@@ -158,13 +158,13 @@ public class HeroInfo : MonoBehaviour
 		}
 	}
 
-	public void Upgrade(bool rewarded)
+    public void Upgrade(bool rewarded)
 	{
 		string text = levelText.text;
 		surviviorContent.Upgrade(rewarded);
 	}
 
-	public void PlayFx(bool rewarded)
+    public void PlayFx(bool rewarded)
 	{
 		upgradeFx.Play();
 		if (rewarded)
@@ -179,12 +179,12 @@ public class HeroInfo : MonoBehaviour
 		UpdateInfo();
 	}
 
-	public void Buy()
+    public void Buy()
 	{
 		InAppManager.Instance.BuyProductID(productIndex);
 	}
 
-	public void SetVideoButton(bool active)
+    public void SetVideoButton(bool active)
 	{
 		buttonVideoUpgrade.interactable = active;
 		if (active)
@@ -199,7 +199,7 @@ public class HeroInfo : MonoBehaviour
 		}
 	}
 
-	public void OnEnable()
+    public void OnEnable()
 	{
 		UpdateInfo();
 		if (surviviorContent.fakeVideoUpgrade.activeInHierarchy)
@@ -224,7 +224,7 @@ public class HeroInfo : MonoBehaviour
 		StartCoroutine(UIController.instance.Scale(base.transform));
 	}
 
-	public void UpdateInfo()
+    public void UpdateInfo()
 	{
 		int currentHeroLevel = GetCurrentHeroLevel();
 		float num = (1f + PassiveAbilitiesManager.bonusHelper.GetCriticalHitChance()) * (1f + PassiveAbilitiesManager.bonusHelper.AttackSpeedBonus) * (1f + PassiveAbilitiesManager.bonusHelper.DamageBonus);
@@ -279,12 +279,12 @@ public class HeroInfo : MonoBehaviour
 		buttonVideoUpgrade.image.rectTransform.anchoredPosition = vector;
 	}
 
-	public void OnDisable()
+    public void OnDisable()
 	{
 		StopAllCoroutines();
 	}
 
-	public void SetUpgradeButtonInteractable(bool interactable)
+    public void SetUpgradeButtonInteractable(bool interactable)
 	{
 	}
 
