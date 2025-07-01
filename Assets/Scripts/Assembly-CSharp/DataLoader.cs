@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using IAP;
 using UnityEngine;
-
+using GUI = GuiInGame.GUI;
 public class DataLoader : MonoBehaviour
 {
 	public static SaveData playerData;
@@ -110,17 +110,17 @@ public class DataLoader : MonoBehaviour
 		FillBotsData();
 		FillAchievements();
         FillSurvivorLevels();
-        LoadingScene loadingScene = UnityEngine.Object.FindObjectOfType<LoadingScene>();
-        if (loadingScene != null)
-        {
-            loadingScene.StartLoading();
-        }
         SetExperienceLevels();
 		SetMoneyBoxData();
 		FillZombiesPrefabData();
 		dataUpdateManager = UnityEngine.Object.FindObjectOfType<DataUpdateManager>();
 		notifManger = UnityEngine.Object.FindObjectOfType<NotificationManager>();
 		hidingObjects = null;
+		LoadingScene loadingScene = UnityEngine.Object.FindObjectOfType<LoadingScene>();
+		if (loadingScene != null)
+		{
+			loadingScene.StartLoading();
+		}
     }
 
 	public void InitializePlayerData()

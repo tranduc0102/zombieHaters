@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using GuiInGame;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -167,8 +168,8 @@ public class UIPvpGO : UIBaseGO
 		buttonX2.gameObject.SetActive(false);
 		buttonOk.image.rectTransform.anchoredPosition = Vector2.zero;
 		UIController.instance.scrollControllers.survivorsController.SetRandomVideo();
-/*		AdsManager.instance.DecreaseInterstitialCounter();
-*/		AnalyticsManager.instance.LogEvent(GetVideoEventName(), new Dictionary<string, string>());
+		DataLoader.gui.DecreaseInterstitialCounter();
+		AnalyticsManager.instance.LogEvent(GetVideoEventName(), new Dictionary<string, string>());
 		if (playerCell == -1)
 		{
 			smallCell.UpdateRating(int.Parse(smallCell.ratingText.text) + ArenaManager.instance.loseRating);
@@ -185,10 +186,10 @@ public class UIPvpGO : UIBaseGO
 		return "PVPVideoReward";
 	}
 
-	/*protected override AdsManager.AdName GetAdName()
+	protected override AdName GetAdName()
 	{
-		return AdsManager.AdName.RewardIncRatingPVP;
-	}*/
+		return AdName.RewardIncRatingPVP;
+	}
 
 	public override void ExitToMenu()
 	{

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using GUI = GuiInGame.GUI;
 
 public class OverlayParticle : MonoBehaviour
 {

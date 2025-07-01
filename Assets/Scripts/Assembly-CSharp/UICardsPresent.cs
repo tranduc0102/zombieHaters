@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ACEPlay.Bridge;
+using GuiInGame;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UICardsPresent : UIPresent
@@ -182,7 +185,9 @@ public class UICardsPresent : UIPresent
 		}
 		else
 		{
-            StartCoroutine(InvokeOpen(card));
+			UnityEvent onDone = new UnityEvent();
+			onDone.AddListener(delegate { StartCoroutine(InvokeOpen(card)); });
+			BridgeController.instance.ShowRewarded($"Show rewarded{AdName.RewardOpenCard}", onDone);
            /* AdsManager.instance.ShowRewarded(delegate
 			{
 				
@@ -194,8 +199,8 @@ public class UICardsPresent : UIPresent
 	{
 		if (freeCardOpened)
 		{
-/*			AdsManager.instance.DecreaseInterstitialCounter();
-*/		}
+			DataLoader.gui.DecreaseInterstitialCounter();
+		}
 		else
 		{
 			animatorHand.gameObject.SetActive(false);

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ACEPlay.Bridge;
 using UnityEngine;
 
 public class UISurvivorUpgradePanel : UIBaseScrollPanel<SurviviorContent>
@@ -40,7 +41,7 @@ public class UISurvivorUpgradePanel : UIBaseScrollPanel<SurviviorContent>
 			dataArray[i].SetVideoButton(false);
 			list.Add(i);
 		}
-		if (IsVideoUpgradeAvailable() || /*!AdsManager.instance.IsRewardedVideoAvailable(AdsManager.AdName.RewardUpgradeHero) ||*/ !GameManager.instance.IsTutorialCompleted() || DataLoader.Instance.GetCurrentPlayerLevel() <= 2)
+		if (IsVideoUpgradeAvailable() || !BridgeController.instance.IsRewardReady() || !GameManager.instance.IsTutorialCompleted() || DataLoader.Instance.GetCurrentPlayerLevel() <= 2)
 		{
 			return;
 		}

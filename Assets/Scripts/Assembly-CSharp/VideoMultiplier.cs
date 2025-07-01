@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ACEPlay.Bridge;
+using GuiInGame;
 using IAP;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class VideoMultiplier : MonoBehaviour
@@ -104,11 +107,12 @@ public class VideoMultiplier : MonoBehaviour
 
 	public void Reward()
 	{
-        StartCoroutine(DelayedGetReward());
-
-       /* AdsManager.instance.ShowRewarded(delegate
+		UnityEvent onDone = new UnityEvent();
+		onDone.AddListener(() =>
 		{
-		}, AdsManager.AdName.RewardMulriplierTime);*/
+			StartCoroutine(DelayedGetReward());
+		});
+		BridgeController.instance.ShowRewarded($"reward: {AdName.RewardMulriplierTime}", onDone);
 	}
 
 	public void BuyInfinityMultiplier()

@@ -1,5 +1,8 @@
 using System;
 using System.Collections.Generic;
+using ACEPlay.Bridge;
+using GuiInGame;
+using UnityEngine.Events;
 using WoodenSword.ZombieHaters.UI;
 
 public class UIBoostersScrollCellContent : UIBaseBottomScrollCellContent
@@ -40,17 +43,24 @@ public class UIBoostersScrollCellContent : UIBaseBottomScrollCellContent
 		if (boosterType == CellBoosters.KillAll || boosterType == CellBoosters.Survivor)
 		{
 			SaveData.BoostersData.BoosterType b = ((boosterType == CellBoosters.KillAll) ? SaveData.BoostersData.BoosterType.KillAll : SaveData.BoostersData.BoosterType.NewSurvivor);
-            DataLoader.Instance.BuyBoosters(b);
-            UpdateContent();
-            AnalyticsManager.instance.LogEvent("BuyBoosterVideo", new Dictionary<string, string> {
-                {
-                    "Type",
-                    boosterType.ToString()
-                } });
+			UnityEvent onDone = new UnityEvent();
+			onDone.AddListener(delegate
+			{
+				DataLoader.Instance.BuyBoosters(b);
+				UpdateContent();
+				AnalyticsManager.instance.LogEvent("BuyBoosterVideo", new Dictionary<string, string> {
+				{
+					"Type",
+					boosterType.ToString()
+				} });
+			});
+			BridgeController.instance.ShowRewarded($"Show reward:{((b != SaveData.BoostersData.BoosterType.KillAll) ? AdName.RewardMoreSurvival : AdName.RewardKillAll)}", onDone);
+       
+         
             /*AdsManager.instance.ShowRewarded(delegate
 			{
 				
-			}, (b != SaveData.BoostersData.BoosterType.KillAll) ? AdsManager.AdName.RewardMoreSurvival : AdsManager.AdName.RewardKillAll);*/
+			}, ;*/
 		}
 	}
 

@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using ACEPlay.Bridge;
+using GuiInGame;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UIPizzaPresent : UIPresent
@@ -55,7 +58,9 @@ public class UIPizzaPresent : UIPresent
 
 	public void Open()
 	{
-        StartCoroutine(InvokeOpen());
+		UnityEvent onDone = new UnityEvent();
+		onDone.AddListener(() => {StartCoroutine(InvokeOpen());});
+		BridgeController.instance.ShowRewarded($"Show rewarded {AdName.RewardPresentBox}", onDone);
 
       /*  AdsManager.instance.ShowRewarded(delegate
 		{
@@ -71,8 +76,8 @@ public class UIPizzaPresent : UIPresent
 		topPlashka.SetActive(false);
 		img_bigPizza.gameObject.SetActive(true);
 		boxCap.anchoredPosition = new Vector2(100f, -224f);
-/*		AdsManager.instance.DecreaseInterstitialCounter();
-*/		StartSimulation();
+		DataLoader.gui.DecreaseInterstitialCounter();
+		StartSimulation();
 		SoundManager.Instance.PlaySound(rewardClip, 1f);
 		AnalyticsManager.instance.LogEvent("PizzaPresentOpenned", new Dictionary<string, string> { 
 		{

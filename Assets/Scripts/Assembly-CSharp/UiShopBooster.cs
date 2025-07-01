@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using ACEPlay.Bridge;
+using GuiInGame;
 using IAP;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UiShopBooster : MonoBehaviour
@@ -64,9 +67,15 @@ public class UiShopBooster : MonoBehaviour
 
 	public void OnShowAds()
 	{
-        DataLoader.Instance.BuyBoosters(boosterType, amount);
-        PurchaseFx();
-        uIPopupShop.UpdateBoosters();
+		UnityEvent onDone = new UnityEvent();
+		onDone.AddListener(delegate
+		{
+			DataLoader.Instance.BuyBoosters(boosterType, amount);
+			PurchaseFx();
+			uIPopupShop.UpdateBoosters();
+		});
+		BridgeController.instance.ShowRewarded($"Reward: {((boosterType != SaveData.BoostersData.BoosterType.KillAll) ? AdName.RewardMoreSurvival : AdName.RewardKillAll)}", onDone);
+       
         AnalyticsManager.instance.LogEvent("BuyBoosterVideo", new Dictionary<string, string> {
             {
                 "Type",

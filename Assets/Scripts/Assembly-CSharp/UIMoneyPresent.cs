@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using ACEPlay.Bridge;
+using GuiInGame;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UIMoneyPresent : UIPresent
@@ -31,7 +34,9 @@ public class UIMoneyPresent : UIPresent
 
 	public void DoubleMoney()
 	{
-        StartCoroutine(InvokeX2());
+       UnityEvent onDone = new UnityEvent();
+       onDone.AddListener(() => { StartCoroutine(InvokeX2());});
+       BridgeController.instance.ShowRewarded($"Show rewarded {AdName.RewardX2CoinsPresent}", onDone);
 
        /* AdsManager.instance.ShowRewarded(delegate
 		{
@@ -47,8 +52,8 @@ public class UIMoneyPresent : UIPresent
 		yield return new WaitForSecondsRealtime(0.3f);
 		money *= 2;
 		moneyText.text = money.ToString();
-/*		AdsManager.instance.DecreaseInterstitialCounter();
-*/		SoundManager.Instance.PlaySound(rewardClip, 1f);
+		DataLoader.gui.DecreaseInterstitialCounter();
+		SoundManager.Instance.PlaySound(rewardClip, 1f);
 		AnalyticsManager.instance.LogEvent("MoneyPresentX2", new Dictionary<string, string>());
 	}
 

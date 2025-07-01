@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using ACEPlay.Bridge;
+using GuiInGame;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class WheelOfFortune : UIPresent
@@ -177,7 +180,9 @@ public class WheelOfFortune : UIPresent
 	{
 		StopSimulation();
 		StopCoroutine(timerCor);
-        StartCoroutine(InvokeSpin());
+		UnityEvent onDone = new UnityEvent();
+		onDone.AddListener(delegate { StartCoroutine(InvokeSpin());});
+		BridgeController.instance.ShowRewarded($"Show reward :{AdName.RewardSpin}", onDone);
 
     /*    AdsManager.instance.ShowRewarded(delegate
 		{
@@ -202,7 +207,7 @@ public class WheelOfFortune : UIPresent
 		spinCount++;
 		spinSkip.SetActive(false);
 		claim.SetActive(false);
-		//AdsManager.instance.DecreaseInterstitialCounter();
+		DataLoader.gui.DecreaseInterstitialCounter();
 		SoundManager.Instance.PlaySound(rewardClip, 1f);
 		AnalyticsManager.instance.LogEvent("Spin", new Dictionary<string, string> { 
 		{

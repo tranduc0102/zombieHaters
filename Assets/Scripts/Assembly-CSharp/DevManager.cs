@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ACEPlay.Bridge;
 using IAP;
 using IngameDebugConsole;
 using UnityEngine;
@@ -152,8 +153,8 @@ public class DevManager : MonoBehaviour
 
 	public void ShowBanner()
 	{
-/*		AdsManager.instance.ShowBanner();
-*/	}
+		BridgeController.instance.ShowBanner();
+	}
 
 	public void ResetData(bool startWithTutorial)
 	{

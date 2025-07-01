@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using GuiInGame;
 using UnityEngine;
 using UnityEngine.UI;
+using GUI = GuiInGame.GUI;
 
 public class UIArenaGO : UIBaseGO
 {
@@ -31,10 +33,10 @@ public class UIArenaGO : UIBaseGO
 		return "LeagueAddRating";
 	}
 
-/*	protected override AdsManager.AdName GetAdName()
+	protected override AdName GetAdName()
 	{
-		return AdsManager.AdName.RewardIncRatingArena;
-	}*/
+		return AdName.RewardIncRatingArena;
+	}
 
 	public override void SetContent(double newcoins, int newHaters, int exp, long score, int time)
 	{
@@ -154,8 +156,8 @@ public class UIArenaGO : UIBaseGO
 		buttonX2.gameObject.SetActive(false);
 		buttonOk.image.rectTransform.anchoredPosition = Vector2.zero;
 		UIController.instance.scrollControllers.survivorsController.SetRandomVideo();
-/*		AdsManager.instance.DecreaseInterstitialCounter();
-*/		AnalyticsManager.instance.LogEvent(GetVideoEventName(), new Dictionary<string, string>());
+		DataLoader.gui.DecreaseInterstitialCounter();
+		AnalyticsManager.instance.LogEvent(GetVideoEventName(), new Dictionary<string, string>());
 		StopCoroutine(ratingCor);
 		current = target;
 		target = current + ArenaManager.instance.loseRating;

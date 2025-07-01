@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using ACEPlay.Bridge;
+using GuiInGame;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UIBoosterPresent : UIPresent
@@ -62,8 +65,10 @@ public class UIBoosterPresent : UIPresent
 
 	public void Open()
 	{
-        StartCoroutine(InvokeOpen());
-
+       
+		UnityEvent onDone = new UnityEvent();
+		onDone.AddListener(() =>  StartCoroutine(InvokeOpen()));
+		BridgeController.instance.ShowRewarded($"Show reward for {AdName.RewardPresentBox}", onDone);
       /*  AdsManager.instance.ShowRewarded(delegate
 		{
 		}, AdsManager.AdName.RewardPresentBox);*/
@@ -77,9 +82,9 @@ public class UIBoosterPresent : UIPresent
 		claim.SetActive(true);
 		boosterPlashka.SetActive(false);
 		newBoosterImage.gameObject.SetActive(true);
-		boxCap.anchoredPosition = new Vector2(100f, -224f);
-/*		AdsManager.instance.DecreaseInterstitialCounter();
-*/		StartSimulation();
+		boxCap.anchoredPosition = new Vector2(100f, -224f); 
+		DataLoader.gui.DecreaseInterstitialCounter();
+		StartSimulation();
 		SoundManager.Instance.PlaySound(rewardClip, 1f);
 		AnalyticsManager.instance.LogEvent("BoosterPresentOpenned", new Dictionary<string, string> { 
 		{

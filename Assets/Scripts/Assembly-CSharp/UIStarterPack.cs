@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using ACEPlay.Bridge;
 using IAP;
 using UnityEngine;
 using UnityEngine.UI;
@@ -142,7 +143,6 @@ public class UIStarterPack : MonoBehaviour
 	{
 		StopAllCoroutines();
 	}
-
 	private StarterPackPurchaseInfo GetPackPurchaseInfo(int index)
 	{
 		return InAppManager.Instance.packs[index];

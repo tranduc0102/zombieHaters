@@ -1,4 +1,5 @@
 using UnityEngine;
+using GUI = GuiInGame.GUI;
 
 public class ParticleCamera : MonoBehaviour
 {

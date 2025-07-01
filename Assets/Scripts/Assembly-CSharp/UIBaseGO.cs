@@ -1,9 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ACEPlay.Bridge;
+using GuiInGame;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using GUI = GuiInGame.GUI;
 
 public class UIBaseGO : MonoBehaviour
 {
@@ -86,10 +89,10 @@ public class UIBaseGO : MonoBehaviour
 		return "GameOver";
 	}
 
-	/*protected virtual AdsManager.AdName GetAdName()
+	protected virtual AdName GetAdName()
 	{
-		return AdsManager.AdName.RewardX2GameOver;
-	}*/
+		return AdName.RewardX2GameOver;
+	}
 
 	public void AdsReward()
 	{
@@ -99,11 +102,9 @@ public class UIBaseGO : MonoBehaviour
 		{
 			coinsCountText.text = AbbreviationUtility.AbbreviateNumber(currentCoins);
 		}
-        GetX2();
-      /*  AdsManager.instance.ShowRewarded(delegate
-		{
-			
-		}, GetAdName());*/
+		UnityEvent onDone = new UnityEvent();
+		onDone.AddListener(GetX2);
+		BridgeController.instance.ShowRewarded($"Show reward: {GetAdName()}", onDone);
 	}
 
 	private void GetX2()
@@ -119,8 +120,8 @@ public class UIBaseGO : MonoBehaviour
 		DataLoader.Instance.RefreshMoney(currentCoins, true);
 		multiplierImageObj.SetActive(true);
 		UIController.instance.scrollControllers.survivorsController.SetRandomVideo();
-/*		AdsManager.instance.DecreaseInterstitialCounter();
-*/		StartCoroutine(AnimateText(coinsCountText, currentCoins, currentCoins * 2.0, true, true));
+		DataLoader.gui.DecreaseInterstitialCounter();
+		StartCoroutine(AnimateText(coinsCountText, currentCoins, currentCoins * 2.0, true, true));
 		AnalyticsManager.instance.LogEvent(GetVideoEventName(), new Dictionary<string, string>());
 	}
 
@@ -128,8 +129,8 @@ public class UIBaseGO : MonoBehaviour
 	{
 		if (currentTime < 20)
 		{
-/*			AdsManager.instance.DecreaseInterstitialCounter();
-*/		}
+			DataLoader.gui.DecreaseInterstitialCounter();
+		}
 	}
 
 	public string TimeInSeconds(int timeInSeconds)

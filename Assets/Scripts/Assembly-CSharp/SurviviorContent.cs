@@ -2,7 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using ACEPlay.Bridge;
+using GuiInGame;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class SurviviorContent : UIScrollCell
@@ -208,18 +211,23 @@ public class SurviviorContent : UIScrollCell
 		}
 		if (rewarded)
 		{
-            StartCoroutine(DelayedVideoUpgrade());
-            AnalyticsManager.instance.LogEvent("RewardedHeroUpgrade", new Dictionary<string, string>
-                {
-                    {
-                        "HeroType",
-                        DataLoader.playerData.heroData[base.cellIndex].heroType.ToString()
-                    },
-                    {
-                        "Level",
-                        DataLoader.playerData.heroData[base.cellIndex].currentLevel.ToString()
-                    }
-                });
+           UnityEvent onDone = new UnityEvent();
+           onDone.AddListener(delegate
+           {
+	           StartCoroutine(DelayedVideoUpgrade());
+	           AnalyticsManager.instance.LogEvent("RewardedHeroUpgrade", new Dictionary<string, string>
+	           {
+		           {
+			           "HeroType",
+			           DataLoader.playerData.heroData[base.cellIndex].heroType.ToString()
+		           },
+		           {
+			           "Level",
+			           DataLoader.playerData.heroData[base.cellIndex].currentLevel.ToString()
+		           }
+	           });
+           });
+           BridgeController.instance.ShowRewarded($"Show rewarded:{AdName.RewardUpgradeHero}", onDone);
             /*AdsManager.instance.ShowRewarded(delegate
 			{
 				
