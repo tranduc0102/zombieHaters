@@ -38,7 +38,7 @@ namespace GuiInGame
         [SerializeField]
         private OnLevelUpFx onLevelUpFx;
 
-        [Header("-----------------------Video Reward Buster-----------------------")]
+        [Header("Video Reward Buster")]
         public Animator videoAnim;
 
         public Animator multiplierAnim;
@@ -47,17 +47,17 @@ namespace GuiInGame
 
         public VideoMultiplier videoMultiplier;
 
-        [Header("-----------------------Pop-ups-----------------------")]
+        [Header("Pop-ups")]
         public PopUpsPanel popUpsPanel;
 
-        [Header("-----------------------Level-----------------------")]
+        [Header("Level")]
         [SerializeField]
         private Text levelText;
 
         [SerializeField]
         private Image levelProgress;
 
-        [Header("-----------------------Offline-----------------------")]
+        [Header("Offline")]
         [SerializeField]
         private GameObject offlinePanel;
 
@@ -68,7 +68,7 @@ namespace GuiInGame
 
         public RectTransform objButtonOfflineOk;
 
-        [Header("-----------------------UIPanels-----------------------")]
+        [Header("UIPanels")]
         [SerializeField]
         private GameObject PlayUI;
 
@@ -96,7 +96,7 @@ namespace GuiInGame
         [SerializeField]
         private GameObject NextWorldReadyUI;
 
-        [Header("-----------------------Sound-----------------------")]
+        [Header("Sound")]
         [SerializeField]
         private GameObject musicON;
 
@@ -109,7 +109,7 @@ namespace GuiInGame
         [SerializeField]
         private GameObject soundOFF;
 
-        [Header("-----------------------MoneyBox-----------------------")]
+        [Header("MoneyBox")]
         [SerializeField]
         private Image secretHatImage;
 
@@ -117,7 +117,7 @@ namespace GuiInGame
 
         public GameObject newSecret;
 
-        [Header("-----------------------BossUI-----------------------")]
+        [Header("BossUI")]
         [SerializeField]
         private Image fillProgressToBoss;
 
@@ -146,7 +146,7 @@ namespace GuiInGame
 
         private float maxWidthBossHealth;
 
-        [Header("-----------------------CarCaravanEventUI-----------------------")]
+        [Header("CarCaravanEventUI")]
         [SerializeField]
         private Image fillFuelTank;
 
@@ -172,7 +172,7 @@ namespace GuiInGame
 
         private List<Image> imageCanisters;
 
-        [Header("-----------------------WorldsUI-----------------------")]
+        [Header("WorldsUI")]
         [SerializeField]
         private GameObject buttonNextWorld;
 
@@ -182,7 +182,7 @@ namespace GuiInGame
         [SerializeField]
         private Text textWorldName;
 
-        [Header("-----------------------LoadingUI-----------------------")]
+        [Header("LoadingUI")]
         [SerializeField]
         private Loading loadingScreen;
 
@@ -229,7 +229,7 @@ namespace GuiInGame
 
         public GameOverManager gameOverManager;
 
-        [Header("-----------------------PvpUI-----------------------")]
+        [Header("PvpUI")]
         public PvpPointer pvpPointer;
 
         public Text lbl_pvpInGameTimer;
