@@ -32,7 +32,7 @@ public class ZombiesSpawn : PointOnMap
 	}
 
 	private IEnumerator SpawnProcess(float maxCurrentWavePower)
-	{
+	{		
 		GameManager.GameModes startOnMode = GameManager.instance.currentGameMode;
 		List<WavesManager.ZombieRank> zombies = new List<WavesManager.ZombieRank>();
 		List<int> chances = new List<int>(WavesManager.instance.chances);

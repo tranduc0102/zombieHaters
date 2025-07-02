@@ -12,7 +12,7 @@ public class TreeFx : MonoBehaviour
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other == null) return;
-		if (other.tag == "Survivor" && !particles.isPlaying)
+		if (other.tag == "Survivor" && particles != null  && !particles.isPlaying)
 		{
 			particles.Play();
 		}

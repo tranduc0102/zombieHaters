@@ -649,6 +649,7 @@ namespace GuiInGame
 
         public void GoPVP()
         {
+            fillBossHealth.transform.parent.gameObject.SetActive(false);
             PlayUI.SetActive(true);
             JoystickUI.SetActive(true);
             GameManager.instance.LoadPVPArena();
