@@ -1,27 +1,29 @@
-Shader "Transparent/Diffuse on top" {
+﻿Shader "Custom/TransparentDiffuseFade" {
 	Properties {
-		_Color ("Main Color", Vector) = (1,1,1,1)
-		_MainTex ("Diffuse (RGB) Alpha (A)", 2D) = "white" {}
+		_Color ("Main Color", Color) = (1,1,1,1)
+		_MainTex ("Main Texture", 2D) = "white" {}
 	}
-	//DummyShaderTextExporter
-	SubShader{
-		Tags { "RenderType"="Opaque" }
+	SubShader {
+		Tags { "Queue"="Transparent" "RenderType"="Transparent" }
 		LOD 200
+		ZWrite Off
+		Blend SrcAlpha OneMinusSrcAlpha
+
 		CGPROGRAM
-#pragma surface surf Standard
-#pragma target 3.0
+		#pragma surface surf Standard alpha:fade
+		#pragma target 3.0
 
 		sampler2D _MainTex;
 		fixed4 _Color;
-		struct Input
-		{
+
+		struct Input {
 			float2 uv_MainTex;
 		};
-		
-		void surf(Input IN, inout SurfaceOutputStandard o)
-		{
+
+		void surf(Input IN, inout SurfaceOutputStandard o) {
 			fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
-			o.Albedo = c.rgb;
+			float alpha = max(c.a, 0.001);
+			o.Albedo = c.rgb / alpha;
 			o.Alpha = c.a;
 		}
 		ENDCG
