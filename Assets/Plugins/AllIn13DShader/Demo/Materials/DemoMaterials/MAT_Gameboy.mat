@@ -9,6 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: MAT_Gameboy
   m_Shader: {fileID: 4800000, guid: 6034452bd7752ab41918b7826b5cfd4f, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALBEDOVERTEXCOLORMODE_REPLACE
   - _ALPHA_CUTOFF_ON
@@ -21,7 +23,6 @@ Material:
   - _FADE_ON
   - _GREYSCALESTAGE_BEFORELIGHTING
   - _HEIGHTGRADIENTPOSITIONSPACE_LOCAL
-  - _HIGHLIGHTS_ON
   - _LIGHTMODEL_FAKEGI
   - _MATCAPBLENDMODE_MULTIPLY
   - _MATCAP_ON
@@ -45,6 +46,7 @@ Material:
   m_CustomRenderQueue: 2000
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -253,7 +255,7 @@ Material:
     - _HeightGradientPositionSpace: 0
     - _HighlightCutoff: 0.807
     - _HighlightSmoothness: 0.5
-    - _Highlights: 1
+    - _Highlights: 0
     - _HighlightsStrength: 1
     - _Hit: 0
     - _HitBlend: 1
