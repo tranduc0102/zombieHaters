@@ -19,7 +19,8 @@ public class SaveData
 			MINER = 5,
 			RPG = 6,
 			SMG = 7,
-			PISTOL = 8
+			PISTOL = 8,
+			AUTIOMATIC1 = 9
 		}
 
 		public HeroType heroType;

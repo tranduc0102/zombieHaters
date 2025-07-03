@@ -100,7 +100,7 @@ public class LoadingScene : MonoBehaviour
 		//{
 		//	yield return null;
 		//}
-		operation = SceneManager.LoadSceneAsync("MainScene", LoadSceneMode.Additive);
+		operation = SceneManager.LoadSceneAsync("Dino", LoadSceneMode.Additive);
 		StartCoroutine(EndLoading());
 	}
 

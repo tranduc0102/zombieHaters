@@ -106,7 +106,9 @@ public class WavesManager : MonoBehaviour
 
 	public static WavesManager instance;
 
+	/*
 	[HideInInspector]
+	*/
 	public List<ZombiesSpawn> zombiesSpawns = new List<ZombiesSpawn>();
 
 	public List<ZombieRank> zombies;
@@ -443,7 +445,7 @@ public class WavesManager : MonoBehaviour
 
 	private void SetBossesByWorldData()
 	{
-		string[] array = CsvLoader.SplitLines(Resources.Load<TextAsset>("BossInfoCSV"));
+		string[] array = CsvLoader.SplitLines(Resources.Load<TextAsset>("BossInfoCSV1"));
 		for (int i = 0; i < array.Length; i++)
 		{
 			string[] array2 = array[i].Split(',');

@@ -195,7 +195,10 @@ public class SurvivorHuman : BaseHuman
 			animator.transform.parent = null;
 			Object.Destroy(animator.gameObject, 2f);
 			Object.Destroy(base.gameObject);
-			skinnedMeshRenderer.materials[1].color = new Color(0f, 0f, 0f, 0f);
+			if (skinnedMeshRenderer.materials.Length > 1)
+			{
+				skinnedMeshRenderer.materials[1].color = new Color(0f, 0f, 0f, 0f);
+			}
 			GameManager.instance.DecreaseSurvivor(this);
 		}
 		if (damage < 0f)
@@ -238,16 +241,29 @@ public class SurvivorHuman : BaseHuman
 
 	private IEnumerator takeDamageColorFx()
 	{
-		while (skinnedMeshRenderer.materials[1].color.a < 0.5f)
+		if (skinnedMeshRenderer.materials.Length <= 1)
 		{
-			skinnedMeshRenderer.materials[1].color += new Color(0f, 0f, 0f, Time.deltaTime * 2f);
+			yield break;
+		}
+
+		var mat = skinnedMeshRenderer.materials[1];
+
+		while (mat.color.a < 0.5f)
+		{
+			Color c = mat.color;
+			c.a += Time.deltaTime * 2f;
+			mat.color = c;
 			yield return null;
 		}
-		while (skinnedMeshRenderer.materials[1].color.a > 0f)
+
+		while (mat.color.a > 0f)
 		{
-			skinnedMeshRenderer.materials[1].color -= new Color(0f, 0f, 0f, Time.deltaTime * 2f);
+			Color c = mat.color;
+			c.a -= Time.deltaTime * 2f;
+			mat.color = c;
 			yield return null;
 		}
+
 		takeDamage = null;
 	}
 

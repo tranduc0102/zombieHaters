@@ -69,7 +69,6 @@ public static class CsvLoader
         }
         catch (Exception ex)
         {
-            Debug.LogError($"<color={Color.red}>XXX</color>");
             Debug.LogError($"CustomTryParse<{typeof(T)}> failed for input \"{input}\": {ex.Message}");
             Debug.LogError(($"<color={Color.red}>XXX</color>"));
         }

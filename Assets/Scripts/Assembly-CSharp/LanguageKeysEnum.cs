@@ -288,5 +288,7 @@ public enum LanguageKeysEnum
 	available = 285,
 	your_reward = 286,
 	passive_abilities = 287,
-	num_days_free_then_num_per_week = 288
+	num_days_free_then_num_per_week = 288,
+	TranDuck = 289,
+	He_is_nothing = 290,
 }

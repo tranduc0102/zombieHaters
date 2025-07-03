@@ -168,7 +168,7 @@ public class DataLoader : MonoBehaviour
 		{
             botsData = new PVPBotsData();
             string[] array = CsvLoader.SplitLines(pvpBotsData);
-            int[] array2 = new int[9] { 0, 1, 2, 3, 4, 7, 5, 8, 6 };
+            int[] array2 = new int[10] { 0, 1, 2, 3, 4, 7, 5, 8, 6 , 9};
             for (int i = 0; i < survivors.Count; i++)
             {
                 botsData.botData.Add(new PVPBotsData.BotData
@@ -204,7 +204,7 @@ public class DataLoader : MonoBehaviour
             CsvLoader.SplitText(survivorPowers, ',', ref array2);
             CsvLoader.SplitText(survivorDamage, ',', ref array3);
             CsvLoader.SplitText(survivorHP, ',', ref array4);
-            int[] array5 = new int[9] { 0, 1, 2, 3, 4, 6, 8, 5, 7 };
+            int[] array5 = new int[10] { 0, 1, 2, 3, 4, 6, 8, 5, 7, 9};
             for (int i = 0; i < survivors.Count; i++)
             {
                 for (int j = 0; j < array.GetLength(1); j++)

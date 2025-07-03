@@ -123,7 +123,7 @@ public class UICardsPresent : UIPresent
 		{
 			int index = UnityEngine.Random.Range(0, rewardsInCards.Count);
 			card.content = rewardsInCards[index].content;
-			rewardsInCards[index].content.transform.parent = card.transform;
+			rewardsInCards[index].content.transform.SetParent(card.transform, false);
 			rewardsInCards[index].content.transform.localPosition = Vector3.zero;
 			rewardsInCards.RemoveAt(index);
 			card.IsVisible(true);
@@ -226,7 +226,7 @@ public class UICardsPresent : UIPresent
 			if (randomValue < ran)
 			{
 				card.content = rewardsInCards[j].content;
-				card.content.transform.parent = card.transform;
+				card.content.transform.SetParent(card.transform, false);
 				card.content.transform.localPosition = Vector3.zero;
 				currentRewardNum = j;
 				break;
