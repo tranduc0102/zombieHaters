@@ -1,0 +1,1081 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &416497515523018125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 684331048379614130}
+  - component: {fileID: 5736929409341992957}
+  m_Layer: 0
+  m_Name: ArenaManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &684331048379614130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416497515523018125}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5403905276163232433}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5736929409341992957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416497515523018125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c7309ccba4f0d2f863d62c887742e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  csvData: {fileID: 4900000, guid: 8e1615b41d2bb674d892b04a7b0cc81f, type: 3}
+  arenaStages: 4
+  winRating: 25
+  loseRating: 15
+  bonusPercentage: 50
+  arenaSwitched: 0
+  ratingBeforeGame: 0
+--- !u!1 &650241465722396715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6662142733281484336}
+  - component: {fileID: 1006546629353000190}
+  m_Layer: 0
+  m_Name: PassiveAbilitiesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6662142733281484336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650241465722396715}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5403905276163232433}
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &1006546629353000190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650241465722396715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0698c0ad10196143757610603bb6071f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityPrice: {fileID: 4900000, guid: 185df1e057c7f6446b64315db89cc251, type: 3}
+  abilityBonus: {fileID: 4900000, guid: 74bde8a78b7936c4586a0fbb9a8b4421, type: 3}
+  maxAbilityLevel: 3
+--- !u!1 &4322980139736383063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7348174580498770538}
+  - component: {fileID: 857002965366068229}
+  - component: {fileID: 2334201209845693886}
+  - component: {fileID: 3860931361257393110}
+  - component: {fileID: 8391793692985081499}
+  - component: {fileID: 7061310453220397219}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7348174580498770538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322980139736383063}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5403905276163232433}
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &857002965366068229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322980139736383063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62a70fefdbe51ea7569a8b1c75aa77d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _iosApiKey: 8YDGRCN8S7K797MSXB97
+  _androidApiKey: 5XNBBG5NC7B77VZPHPRP
+  _appsFlyerDevKey: ELctKLYrDm4fb6desm4gmm
+  trafficIdIOS: 864
+  trafficIdAndroid: 863
+  buglyIdIOS: 5d116d811e
+  buglyIdAndroid: 37e560471e
+  iTunesKey: 1424127467
+--- !u!114 &2334201209845693886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322980139736383063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7872780575391bb1325ef149eacae193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3860931361257393110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322980139736383063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81ba57ff31d3ba55192ff025824bbf42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugMode: 0
+  notifications:
+  - header1: Zombie Haters
+    description: The helicopter successfully delivered a daily supply. Will you open
+      it?
+    header2: 
+    timeType: 0
+    delayType: 2
+    delay: 1
+  testNotification:
+    header1: 
+    description: 
+    header2: 
+    timeType: 0
+    delayType: 2
+    delay: 0
+--- !u!114 &8391793692985081499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322980139736383063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47b16a51d69ab5739178e74f1c0f006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IosLeaderboardID: com.woodensword.zombie.highscore
+  AndroidLeaderboardID: CgkI053g7tQdEAIQAQ
+--- !u!114 &7061310453220397219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322980139736383063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450b33ab2cfd35e4b6e9d34fb9ec0837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 11400000, guid: 22e6e6fa1a6391048b4baaac4cdc4d96, type: 2}
+  simulationKeyValueStore: {fileID: 11400000, guid: 88cce0614f83a4349836c76bb92a9e8d,
+    type: 2}
+--- !u!1 &7394993477397907475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5403905276163232433}
+  - component: {fileID: 6164914089061799041}
+  - component: {fileID: 6029652649670129149}
+  - component: {fileID: 5358130342909985470}
+  m_Layer: 0
+  m_Name: DataLoaderNEWDATA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5403905276163232433
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394993477397907475}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7348174580498770538}
+  - {fileID: 684331048379614130}
+  - {fileID: 6662142733281484336}
+  - {fileID: 7061382505842156804}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &6164914089061799041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394993477397907475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc63e30a7f8e17f9f85ae468f16df1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  survivorLevels: {fileID: 4900000, guid: aef39616b22775949a6800fdef53a8dc, type: 3}
+  achievementData: {fileID: 4900000, guid: 767f5030f805814499089b0207365843, type: 3}
+  experienceData: {fileID: 4900000, guid: 12f560f92e562a14a8f4b90af0032b45, type: 3}
+  moneyBoxData: {fileID: 4900000, guid: 2dfa9f17db50fde4e9f7cab2dc9b4050, type: 3}
+  survivorPowers: {fileID: 4900000, guid: 26de30c2d017fe44d99f2ec90057b977, type: 3}
+  survivorDamage: {fileID: 4900000, guid: f6a36a94de2841142a619f3eb1af5aff, type: 3}
+  survivorHP: {fileID: 4900000, guid: 7fb41f6ab9e40f64796d95b6af17db5e, type: 3}
+  pvpBotsData: {fileID: 4900000, guid: 286523ab166f1d94896feee0a942c36a, type: 3}
+  zombiePrefabData:
+  - type: 0
+    zombiePrefabs:
+    - {fileID: 8768235206962968089, guid: 0d27bbf9c03b37f46ac4fa77949de3f6, type: 3}
+    - {fileID: 5679136199666280072, guid: 5d498dc2b84466b4a991d87cd321489b, type: 3}
+    - {fileID: 8878135346868831591, guid: 87966192e54289840b4778153527b3d5, type: 3}
+    - {fileID: 4349699633511014667, guid: b2017374f1b6f984181bdb462f7de999, type: 3}
+    health: 10
+    damage: 3
+    power: 5.66
+  - type: 0
+    zombiePrefabs:
+    - {fileID: 8175691249935195460, guid: 1bfd6e6c56ac9184a951b8aea9b5ad78, type: 3}
+    health: 150
+    damage: 3
+    power: 0
+  - type: 1
+    zombiePrefabs:
+    - {fileID: 1481180448173762, guid: 9a77c47121da52944a563705d06188ba, type: 3}
+    health: 200
+    damage: 4
+    power: 0
+  - type: 2
+    zombiePrefabs:
+    - {fileID: 1169278094531386, guid: 728109e123580c34095fe94fa3a52665, type: 3}
+    health: 1000
+    damage: 4
+    power: 0
+  - type: 3
+    zombiePrefabs:
+    - {fileID: 1513613283905839, guid: 9eba321eceef6ad4b8ec0c80836f44d7, type: 3}
+    health: 500
+    damage: 4
+    power: 0
+  - type: 4
+    zombiePrefabs:
+    - {fileID: 1556956328346758, guid: 42cf6600ba9737744b4ff1d669f3586e, type: 3}
+    health: 2500
+    damage: 5
+    power: 0
+  - type: 1
+    zombiePrefabs:
+    - {fileID: 1850408373276207, guid: bff22dbba89be72458318b5dafbc73ef, type: 3}
+    health: 800
+    damage: 6
+    power: 0
+  - type: 2
+    zombiePrefabs:
+    - {fileID: 1039893203958132, guid: bffb7dff6def54d4e899c43e3bb50a5f, type: 3}
+    health: 4000
+    damage: 6
+    power: 0
+  - type: 3
+    zombiePrefabs:
+    - {fileID: 1345437004309152, guid: 6b5e9f25ea8cf4e47996292a97cd8367, type: 3}
+    health: 2000
+    damage: 6
+    power: 0
+  - type: 4
+    zombiePrefabs:
+    - {fileID: 1740150438374998, guid: e022698fe67828744b2ebb4a9947f499, type: 3}
+    health: 10000
+    damage: 7
+    power: 0
+  - type: 3
+    zombiePrefabs:
+    - {fileID: 1083593454798822, guid: 7022005c5ef1b5e46a5c98f8fa4aceec, type: 3}
+    health: 500
+    damage: 5
+    power: 0
+  - type: 3
+    zombiePrefabs:
+    - {fileID: 1617296689415987, guid: e3acbf53a21858a4095d1adceba24441, type: 3}
+    health: 2000
+    damage: 5
+    power: 0
+  - type: 4
+    zombiePrefabs:
+    - {fileID: 1802745559910548, guid: 17b93e99829045f47b5e50203dfef1dc, type: 3}
+    health: 2500
+    damage: 5
+    power: 0
+  - type: 4
+    zombiePrefabs:
+    - {fileID: 1116043570924377, guid: 172632eb21a0ff74991a4fd7f2e5e7ce, type: 3}
+    health: 10000
+    damage: 5
+    power: 0
+  - type: 0
+    zombiePrefabs:
+    - {fileID: 1708632498303839, guid: 7b7fee6d2c30ed7479e95fad0983c9fe, type: 3}
+    health: 600
+    damage: 3
+    power: 0
+  - type: 1
+    zombiePrefabs:
+    - {fileID: 1589872684207453, guid: 4c78411e02a89ed47af2b0017dddc84b, type: 3}
+    health: 3200
+    damage: 4
+    power: 0
+  - type: 2
+    zombiePrefabs:
+    - {fileID: 1599130960166156, guid: 2cd4021d9dec096478c09fd59b096328, type: 3}
+    health: 16000
+    damage: 4
+    power: 0
+  - type: 3
+    zombiePrefabs:
+    - {fileID: 1153386323740222, guid: 291c035faba96ef43abd27953d78fa15, type: 3}
+    health: 8000
+    damage: 4
+    power: 0
+  - type: 4
+    zombiePrefabs:
+    - {fileID: 1647478660946287, guid: 94ed57dee35dd7b4b9eca786dd4105a1, type: 3}
+    health: 40000
+    damage: 5
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1952662335243858, guid: 49b46215ad010d949a92227039c9898b, type: 3}
+    health: 2000
+    damage: 10
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1177972965288378, guid: d3c855c177878c148bdf0df98c54d8b4, type: 3}
+    health: 4680
+    damage: 10
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1377975659126864, guid: 59a72b2827480e345a55f3456cc91cfe, type: 3}
+    health: 7803
+    damage: 10
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1837169493543560, guid: 84e17af3ac50e66459cfe61ce68370ed, type: 3}
+    health: 24629
+    damage: 10
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1951120298836861, guid: b3e2cf175c41fad4aa58c57d83195cb2, type: 3}
+    health: 45516
+    damage: 10
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1959165573214392, guid: 10034c04fe8a42948baf1ef3487903f1, type: 3}
+    health: 424223
+    damage: 10
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1835577280135733, guid: 07d20dc2911d7ec44b711235979191f7, type: 3}
+    health: 127423
+    damage: 10
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1891827533694515, guid: dc6f44a35b8d9e04c880383ce905fb86, type: 3}
+    health: 1444234
+    damage: 10
+    power: 0
+  - type: 0
+    zombiePrefabs:
+    - {fileID: 1723295640948929, guid: b5ff73e03353ca7449604385f0f5b9c5, type: 3}
+    health: 2500
+    damage: 5
+    power: 0
+  - type: 1
+    zombiePrefabs:
+    - {fileID: 1230123806141079, guid: bbf09865885684242866b96f905d2d08, type: 3}
+    health: 22400
+    damage: 5
+    power: 0
+  - type: 2
+    zombiePrefabs:
+    - {fileID: 1158443147392047, guid: 7e86ab5dfd30c6f4fb1df99169f08b72, type: 3}
+    health: 112000
+    damage: 5
+    power: 0
+  - type: 3
+    zombiePrefabs:
+    - {fileID: 1104961166892181, guid: 6ae2de5e6d15cb44c9320341579f2cc7, type: 3}
+    health: 56000
+    damage: 5
+    power: 0
+  - type: 4
+    zombiePrefabs:
+    - {fileID: 1568318186438575, guid: f358744713b951f459ed5d380125641e, type: 3}
+    health: 500000
+    damage: 5
+    power: 0
+  - type: 2
+    zombiePrefabs:
+    - {fileID: 1066571163473272, guid: ad5a172e337d64c49bc4aa9ca88e4ae4, type: 3}
+    health: 1000
+    damage: 5
+    power: 0
+  - type: 2
+    zombiePrefabs:
+    - {fileID: 1104928015144237, guid: 2f56bdfd9bfdc464fb43cb72929bf062, type: 3}
+    health: 4000
+    damage: 5
+    power: 0
+  - type: 2
+    zombiePrefabs:
+    - {fileID: 1682396795394877, guid: d3b2104d4b99e3c4593a33a4e3f2cab9, type: 3}
+    health: 16000
+    damage: 5
+    power: 0
+  - type: 2
+    zombiePrefabs:
+    - {fileID: 1293899168159832, guid: b7355611b65779641a0dabee8afcf3b0, type: 3}
+    health: 112000
+    damage: 5
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1015682811023713, guid: 888a12884e0c0b64fbb176fb64d6ccd9, type: 3}
+    health: 71688
+    damage: 10
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1145329285734172, guid: 5a4a502b44647a84bb15b0fbd70d6c85, type: 3}
+    health: 40120
+    damage: 10
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1458623239481072, guid: 2ca54d997106c8f4b8cc5ee27db4913a, type: 3}
+    health: 868225
+    damage: 10
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1654676081755368, guid: 049bf8cdd788ae6498f07d888cfe243d, type: 3}
+    health: 4499923
+    damage: 10
+    power: 0
+  - type: 3
+    zombiePrefabs:
+    - {fileID: 1339255466708456, guid: ee5c881f7d6a51e48a8bba01d4e4018e, type: 3}
+    health: 8000
+    damage: 4
+    power: 0
+  - type: 3
+    zombiePrefabs:
+    - {fileID: 1429484302236017, guid: e2cb6287eaa791f4abc9668fbfdfbd4a, type: 3}
+    health: 112000
+    damage: 5
+    power: 0
+  - type: 4
+    zombiePrefabs:
+    - {fileID: 1716925544261390, guid: 87adb1dd2b716f34ebf85e3b6746a711, type: 3}
+    health: 40000
+    damage: 5
+    power: 0
+  - type: 4
+    zombiePrefabs:
+    - {fileID: 1591085219620292, guid: 30ea17d4f5e2c2f44950dc441287944b, type: 3}
+    health: 500000
+    damage: 5
+    power: 0
+  - type: 0
+    zombiePrefabs:
+    - {fileID: 1445956859337111, guid: 9e63296be9415a741be11d62c354a397, type: 3}
+    health: 17500
+    damage: 5
+    power: 0
+  - type: 0
+    zombiePrefabs:
+    - {fileID: 1893919636063386, guid: 9d10ccdbbfd4a1c499646833f1adfb9a, type: 3}
+    health: 70000
+    damage: 5
+    power: 0
+  - type: 1
+    zombiePrefabs:
+    - {fileID: 1698912765127234, guid: 3699b82992f9e64419dca99b0d5c599e, type: 3}
+    health: 89600
+    damage: 5
+    power: 0
+  - type: 2
+    zombiePrefabs:
+    - {fileID: 1895079605469939, guid: fe7832f34eaf28b418db04ac42ef32d5, type: 3}
+    health: 448000
+    damage: 5
+    power: 0
+  - type: 3
+    zombiePrefabs:
+    - {fileID: 1975572864826555, guid: 93b50f5c12d82054289c9b1c381812ab, type: 3}
+    health: 224000
+    damage: 5
+    power: 0
+  - type: 4
+    zombiePrefabs:
+    - {fileID: 1912897498671142, guid: 5636457f7f918524dac6f3afbaf9dd29, type: 3}
+    health: 1120000
+    damage: 5
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1094818679699504, guid: 939c99700a35d7e459a4f7a5b02698a9, type: 3}
+    health: 217544
+    damage: 10
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1985935256640049, guid: bb364eabb8a79d94088d3f48c67828f4, type: 3}
+    health: 424223
+    damage: 10
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1041827995007902, guid: a4aad3e4c0be14c4bb6ec11f43623271, type: 3}
+    health: 10931621
+    damage: 10
+    power: 0
+  - type: 5
+    zombiePrefabs:
+    - {fileID: 1858376357539102, guid: 635d87794ae065b4a994d5506d948d28, type: 3}
+    health: 44486038
+    damage: 10
+    power: 0
+  zombiesPrefabs:
+  - {fileID: 3039249322974185290, guid: 0d27bbf9c03b37f46ac4fa77949de3f6, type: 3}
+  - {fileID: 517044909036882789, guid: 5d498dc2b84466b4a991d87cd321489b, type: 3}
+  - {fileID: 962058745362368613, guid: 87966192e54289840b4778153527b3d5, type: 3}
+  - {fileID: 2045223117327333224, guid: b2017374f1b6f984181bdb462f7de999, type: 3}
+  - {fileID: 7770841912140685711, guid: 1bfd6e6c56ac9184a951b8aea9b5ad78, type: 3}
+  - {fileID: 114040950104810703, guid: 7b7fee6d2c30ed7479e95fad0983c9fe, type: 3}
+  - {fileID: 114850091578374495, guid: b5ff73e03353ca7449604385f0f5b9c5, type: 3}
+  - {fileID: 114791836685020570, guid: 9e63296be9415a741be11d62c354a397, type: 3}
+  - {fileID: 114318250828617233, guid: 9d10ccdbbfd4a1c499646833f1adfb9a, type: 3}
+  - {fileID: 114715346425415045, guid: 9a77c47121da52944a563705d06188ba, type: 3}
+  - {fileID: 114387499898691239, guid: bff22dbba89be72458318b5dafbc73ef, type: 3}
+  - {fileID: 114263810827430912, guid: 4c78411e02a89ed47af2b0017dddc84b, type: 3}
+  - {fileID: 114963727410560511, guid: bbf09865885684242866b96f905d2d08, type: 3}
+  - {fileID: 114983396938725890, guid: 3699b82992f9e64419dca99b0d5c599e, type: 3}
+  - {fileID: 114404789410087618, guid: 728109e123580c34095fe94fa3a52665, type: 3}
+  - {fileID: 114029585350247556, guid: bffb7dff6def54d4e899c43e3bb50a5f, type: 3}
+  - {fileID: 114669720992446736, guid: 2cd4021d9dec096478c09fd59b096328, type: 3}
+  - {fileID: 114988269267382529, guid: 7e86ab5dfd30c6f4fb1df99169f08b72, type: 3}
+  - {fileID: 114605830705535407, guid: fe7832f34eaf28b418db04ac42ef32d5, type: 3}
+  - {fileID: 114958240146140426, guid: 9eba321eceef6ad4b8ec0c80836f44d7, type: 3}
+  - {fileID: 114673602160198092, guid: 6b5e9f25ea8cf4e47996292a97cd8367, type: 3}
+  - {fileID: 114092623080241045, guid: 291c035faba96ef43abd27953d78fa15, type: 3}
+  - {fileID: 114646716152723668, guid: 6ae2de5e6d15cb44c9320341579f2cc7, type: 3}
+  - {fileID: 114298630145502282, guid: 93b50f5c12d82054289c9b1c381812ab, type: 3}
+  - {fileID: 114527743000314203, guid: 42cf6600ba9737744b4ff1d669f3586e, type: 3}
+  - {fileID: 114338512810351479, guid: e022698fe67828744b2ebb4a9947f499, type: 3}
+  - {fileID: 114140202684605103, guid: 94ed57dee35dd7b4b9eca786dd4105a1, type: 3}
+  - {fileID: 114782176677275315, guid: f358744713b951f459ed5d380125641e, type: 3}
+  - {fileID: 114091479358261143, guid: 5636457f7f918524dac6f3afbaf9dd29, type: 3}
+  - {fileID: 114341741798028614, guid: ad5a172e337d64c49bc4aa9ca88e4ae4, type: 3}
+  - {fileID: 114013566860722499, guid: 2f56bdfd9bfdc464fb43cb72929bf062, type: 3}
+  - {fileID: 114681055026907032, guid: d3b2104d4b99e3c4593a33a4e3f2cab9, type: 3}
+  - {fileID: 114814304469309289, guid: b7355611b65779641a0dabee8afcf3b0, type: 3}
+  - {fileID: 114480076090233477, guid: 7022005c5ef1b5e46a5c98f8fa4aceec, type: 3}
+  - {fileID: 114545135578319754, guid: e3acbf53a21858a4095d1adceba24441, type: 3}
+  - {fileID: 114122553633475805, guid: ee5c881f7d6a51e48a8bba01d4e4018e, type: 3}
+  - {fileID: 114147307896159913, guid: e2cb6287eaa791f4abc9668fbfdfbd4a, type: 3}
+  - {fileID: 114631535865047376, guid: 17b93e99829045f47b5e50203dfef1dc, type: 3}
+  - {fileID: 114684716293489951, guid: 172632eb21a0ff74991a4fd7f2e5e7ce, type: 3}
+  - {fileID: 114873704866279005, guid: 87adb1dd2b716f34ebf85e3b6746a711, type: 3}
+  - {fileID: 114027751323546988, guid: 30ea17d4f5e2c2f44950dc441287944b, type: 3}
+  survivors:
+  - name: 33
+    fullname: 19
+    heroType: 0
+    icon: {fileID: 0}
+    heroOpenType: 0
+    requiredLevelToOpen: 1
+    daysToOpen: 0
+    heroStory: 20
+    shortDescriptionKey: 168
+    levels: []
+    survivorPrefab: {fileID: 114948764607847546, guid: 19f1917b08b556e4c953583599ea92b3,
+      type: 3}
+  - name: 34
+    fullname: 21
+    heroType: 1
+    icon: {fileID: 0}
+    heroOpenType: 0
+    requiredLevelToOpen: 2
+    daysToOpen: 0
+    heroStory: 22
+    shortDescriptionKey: 169
+    levels: []
+    survivorPrefab: {fileID: 114750648910707303, guid: 217a7a0ea4aa4224aa2b2a82e3764150,
+      type: 3}
+  - name: 35
+    fullname: 23
+    heroType: 2
+    icon: {fileID: 0}
+    heroOpenType: 0
+    requiredLevelToOpen: 3
+    daysToOpen: 0
+    heroStory: 24
+    shortDescriptionKey: 280
+    levels: []
+    survivorPrefab: {fileID: 114643345959716803, guid: da9b13504b5c9704189ef458ffa3af78,
+      type: 3}
+  - name: 36
+    fullname: 25
+    heroType: 3
+    icon: {fileID: 0}
+    heroOpenType: 0
+    requiredLevelToOpen: 6
+    daysToOpen: 0
+    heroStory: 26
+    shortDescriptionKey: 171
+    levels: []
+    survivorPrefab: {fileID: 114436974025767883, guid: 99f3894154b96a14e9eb918acbc75f9b,
+      type: 3}
+  - name: 37
+    fullname: 27
+    heroType: 4
+    icon: {fileID: 0}
+    heroOpenType: 0
+    requiredLevelToOpen: 9
+    daysToOpen: 0
+    heroStory: 28
+    shortDescriptionKey: 279
+    levels: []
+    survivorPrefab: {fileID: 114977848959661012, guid: 1ce17d248c02165489e0e9d7c31872f3,
+      type: 3}
+  - name: 200
+    fullname: 201
+    heroType: 7
+    icon: {fileID: 0}
+    heroOpenType: 1
+    requiredLevelToOpen: 11
+    daysToOpen: 1
+    heroStory: 202
+    shortDescriptionKey: 203
+    levels: []
+    survivorPrefab: {fileID: 114326452349229339, guid: 0060c95454be80b419c6383809f42c82,
+      type: 3}
+  - name: 38
+    fullname: 29
+    heroType: 5
+    icon: {fileID: 0}
+    heroOpenType: 0
+    requiredLevelToOpen: 12
+    daysToOpen: 0
+    heroStory: 30
+    shortDescriptionKey: 173
+    levels: []
+    survivorPrefab: {fileID: 114839200040236603, guid: 988df96696a2c1449ab54b4e850093b6,
+      type: 3}
+  - name: 196
+    fullname: 197
+    heroType: 8
+    icon: {fileID: 0}
+    heroOpenType: 1
+    requiredLevelToOpen: 13
+    daysToOpen: 2
+    heroStory: 198
+    shortDescriptionKey: 199
+    levels: []
+    survivorPrefab: {fileID: 114134635578013237, guid: 2d8b9c67d2c37994e8fce8f80bcb3753,
+      type: 3}
+  - name: 39
+    fullname: 31
+    heroType: 6
+    icon: {fileID: 0}
+    heroOpenType: 0
+    requiredLevelToOpen: 15
+    daysToOpen: 0
+    heroStory: 32
+    shortDescriptionKey: 281
+    levels: []
+    survivorPrefab: {fileID: 114638742663870544, guid: 254009feb9cc556449349e50ed4e96f0,
+      type: 3}
+  - name: 289
+    fullname: 289
+    heroType: 9
+    icon: {fileID: 0}
+    heroOpenType: 0
+    requiredLevelToOpen: 20
+    daysToOpen: 0
+    heroStory: 290
+    shortDescriptionKey: 203
+    levels: []
+    survivorPrefab: {fileID: 114651465313427313, guid: f7d29c0f076289d4f975e83a836c8f41,
+      type: 3}
+  achievements:
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: 8508737db8b873943b588a85034016f8, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: 8508737db8b873943b588a85034016f8, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: 8508737db8b873943b588a85034016f8, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: 8508737db8b873943b588a85034016f8, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: 8508737db8b873943b588a85034016f8, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: 8508737db8b873943b588a85034016f8, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: ea7dc2a4193cc1a44a6cc457c279c5d2, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: ea7dc2a4193cc1a44a6cc457c279c5d2, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: ea7dc2a4193cc1a44a6cc457c279c5d2, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: ea7dc2a4193cc1a44a6cc457c279c5d2, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: ea7dc2a4193cc1a44a6cc457c279c5d2, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: ea7dc2a4193cc1a44a6cc457c279c5d2, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: ea7dc2a4193cc1a44a6cc457c279c5d2, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: ea7dc2a4193cc1a44a6cc457c279c5d2, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: ea7dc2a4193cc1a44a6cc457c279c5d2, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: ea7dc2a4193cc1a44a6cc457c279c5d2, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: 5d4fb97c2e08eb44a8f0e1d3c8db662f, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: 5d4fb97c2e08eb44a8f0e1d3c8db662f, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: 5d4fb97c2e08eb44a8f0e1d3c8db662f, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: c2d5ead103017bc42a914a7f0cf7e024, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: c2d5ead103017bc42a914a7f0cf7e024, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: c2d5ead103017bc42a914a7f0cf7e024, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: c2d5ead103017bc42a914a7f0cf7e024, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: c2d5ead103017bc42a914a7f0cf7e024, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: c2d5ead103017bc42a914a7f0cf7e024, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: c2d5ead103017bc42a914a7f0cf7e024, type: 2}
+  - ID: 0
+    name: 
+    description: 
+    count: 0
+    reward: 0
+    type: 0
+    icon: {fileID: 21300000, guid: c2d5ead103017bc42a914a7f0cf7e024, type: 2}
+  dailyBonus:
+  - type: 0
+    boosterType: 0
+    reward: 100
+  - type: 2
+    boosterType: 0
+    reward: 3
+  - type: 2
+    boosterType: 2
+    reward: 3
+  - type: 2
+    boosterType: 0
+    reward: 4
+  - type: 2
+    boosterType: 2
+    reward: 4
+  - type: 2
+    boosterType: 2
+    reward: 5
+  - type: 2
+    boosterType: 0
+    reward: 7
+  - type: 2
+    boosterType: 2
+    reward: 4
+  - type: 2
+    boosterType: 2
+    reward: 5
+  - type: 2
+    boosterType: 0
+    reward: 5
+  - type: 2
+    boosterType: 2
+    reward: 6
+  - type: 2
+    boosterType: 0
+    reward: 6
+  - type: 2
+    boosterType: 2
+    reward: 7
+  - type: 2
+    boosterType: 0
+    reward: 10
+  passiveAbilitiesManager: {fileID: 1006546629353000190}
+  moneyBoxGold: []
+  levelExperience: []
+  startSquad: 
+  moneyMultiplier: 1
+--- !u!114 &6029652649670129149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394993477397907475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6f276e75c625bc0ee54e3701c76146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5358130342909985470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394993477397907475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7c5584b3c14b2a6550830167d1b58c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingCompleted: 0
+--- !u!1 &7854939088459946549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7061382505842156804}
+  - component: {fileID: 1501792705033514463}
+  m_Layer: 0
+  m_Name: FirebaseMessaging
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7061382505842156804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7854939088459946549}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5403905276163232433}
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &1501792705033514463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7854939088459946549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57288f72edafeb45e905a81de4f88ce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

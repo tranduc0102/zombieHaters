@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using ACEPlay.Bridge;
+using AssetKits.ParticleImage;
 using IAP;
 using UnityEngine;
 using UnityEngine.Events;
@@ -131,7 +132,7 @@ namespace GuiInGame
         private Animator topPanelAnimator;
 
         [SerializeField]
-        private ParticleSystem progressToBossFx;
+        private ParticleImage progressToBossFx;
 
         [SerializeField]
         private Text textButtonNewLocation;
@@ -950,8 +951,8 @@ namespace GuiInGame
         {
             if (bossInDaHause)
             {
-                progressToBossFx.Play();
                 fillBossHealth.transform.parent.gameObject.SetActive(true);
+                progressToBossFx.Play();
             }
             else
             {
