@@ -130,14 +130,14 @@ public class Creature:MonoBehaviour
 	public void SetAI(bool UseAI) { this.useAI=UseAI; if(!this.useAI) { posTGT=Vector3.zero; objTGT=null; objCOL=null; behaviorCount=0; } }
 	//Change materials
 #if UNITY_EDITOR
-	void OnDrawGizmosSelected()
+	/*void OnDrawGizmosSelected()
 	{
 		foreach(SkinnedMeshRenderer o in rend)
 		{
 			if(o.sharedMaterials[0].mainTexture!=skin[bodyTexture.GetHashCode()]) o.sharedMaterials[0].mainTexture=skin[bodyTexture.GetHashCode()];
 			if(o.sharedMaterials[1].mainTexture!=eyes[eyesTexture.GetHashCode()]) o.sharedMaterials[1].mainTexture=eyes[eyesTexture.GetHashCode()];
 		}
-	}
+	}*/
 #endif
 
 	public void SetMaterials(int bodyindex,int eyesindex)

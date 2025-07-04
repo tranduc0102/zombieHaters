@@ -12,5 +12,12 @@ public class RemoveCollider : MonoBehaviour
         {
             DestroyImmediate(col);
         }
+        AudioSource[] audios = GetComponents<AudioSource>();
+        foreach (var col in audios)
+        {
+            DestroyImmediate(col);
+        }
+        foreach (var component in transform.GetComponents<LODGroup>()) DestroyImmediate(component);
+        foreach (var component in transform.GetComponents<Rigidbody>()) DestroyImmediate(component);
     }
 }
