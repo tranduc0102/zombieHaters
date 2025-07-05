@@ -17,7 +17,7 @@ Material:
   - _GREYSCALESTAGE_BEFORELIGHTING
   - _HEIGHTGRADIENTPOSITIONSPACE_LOCAL
   - _LIGHTMAP_COLOR_CORRECTION_ON
-  - _LIGHTMODEL_CLASSIC
+  - _LIGHTMODEL_FASTLIGHTING
   - _MATCAPBLENDMODE_MULTIPLY
   - _OUTLINETYPE_SIMPLE
   - _REFLECTIONS_NONE
@@ -35,7 +35,8 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - FORWARDADD
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -244,7 +245,7 @@ Material:
     - _IntersectionFadeFactor: 1
     - _IntersectionFadeOn: 0
     - _IntersectionGlowOn: 0
-    - _LightModel: 1
+    - _LightModel: 6
     - _LightmapColorCorrection: 1
     - _Matcap: 0
     - _MatcapBlend: 1

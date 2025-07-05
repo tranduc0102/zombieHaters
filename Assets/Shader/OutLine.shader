@@ -1,17 +1,19 @@
-Shader "Custom/OutlinedSilhouetteUnlit_AA"
+Shader "Outlined/UnlitTextureSmoothOutline"
 {
     Properties
     {
-        _Color ("Main Color", Color) = (1,1,1,1)
         _MainTex ("Texture", 2D) = "white" {}
+        _Color ("Color Tint", Color) = (1,1,1,1)
         _OutlineColor ("Outline Color", Color) = (0,0,0,1)
-        _Outline ("Outline Width", Range(0.0, 0.1)) = 0.03
+        _OutlineWidth ("Outline Width", Range(0.001, 0.05)) = 0.02
     }
+
     SubShader
     {
         Tags { "Queue"="Geometry" "RenderType"="Opaque" }
+        LOD 100
 
-        // Pass 1: Outline
+        // Pass 1: Draw the outline (expanded model, in outline color)
         Pass
         {
             Name "OUTLINE"
@@ -19,15 +21,14 @@ Shader "Custom/OutlinedSilhouetteUnlit_AA"
             ZWrite On
             ZTest LEqual
             ColorMask RGB
-            Blend SrcAlpha OneMinusSrcAlpha
 
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
 
-            uniform float _Outline;
-            uniform float4 _OutlineColor;
+            float _OutlineWidth;
+            float4 _OutlineColor;
 
             struct appdata
             {
@@ -38,35 +39,32 @@ Shader "Custom/OutlinedSilhouetteUnlit_AA"
             struct v2f
             {
                 float4 pos : SV_POSITION;
-                float dist : TEXCOORD0;
             };
 
             v2f vert(appdata v)
             {
                 v2f o;
-                float3 worldNormal = UnityObjectToWorldNormal(v.normal);
-                float3 offset = worldNormal * _Outline;
-                o.pos = UnityObjectToClipPos(v.vertex + float4(offset, 0));
-                o.dist = length(offset); // dùng để làm mềm viền
+                float3 norm = normalize(v.normal);
+                float3 offset = norm * _OutlineWidth;
+                float4 pos = v.vertex + float4(offset, 0);
+                o.pos = UnityObjectToClipPos(pos);
                 return o;
             }
 
             fixed4 frag(v2f i) : SV_Target
             {
-                float alpha = smoothstep(0.01, 0.0, fwidth(i.dist));
-                return fixed4(_OutlineColor.rgb, alpha * _OutlineColor.a);
+                return _OutlineColor;
             }
             ENDCG
         }
 
-        // Pass 2: Main texture
+        // Pass 2: Draw the base texture on top
         Pass
         {
-            Name "BASE"
+            Name "TEXTURE"
             Cull Back
             ZWrite On
             ZTest LEqual
-            Blend SrcAlpha OneMinusSrcAlpha
 
             CGPROGRAM
             #pragma vertex vert
@@ -75,6 +73,7 @@ Shader "Custom/OutlinedSilhouetteUnlit_AA"
 
             sampler2D _MainTex;
             float4 _Color;
+            float4 _MainTex_ST;
 
             struct appdata
             {
@@ -92,17 +91,17 @@ Shader "Custom/OutlinedSilhouetteUnlit_AA"
             {
                 v2f o;
                 o.pos = UnityObjectToClipPos(v.vertex);
-                o.uv = v.uv;
+                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 return o;
             }
 
             fixed4 frag(v2f i) : SV_Target
             {
-                fixed4 col = tex2D(_MainTex, i.uv) * _Color;
-                return col;
+                return tex2D(_MainTex, i.uv) * _Color;
             }
             ENDCG
         }
     }
-    Fallback "Diffuse"
+
+    Fallback "Unlit/Texture"
 }
