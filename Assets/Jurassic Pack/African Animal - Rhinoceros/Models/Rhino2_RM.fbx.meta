@@ -1,137 +1,350 @@
 fileFormatVersion: 2
 guid: dc53d90b790d84952bc4626f056e67f0
-timeCreated: 1491632699
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: Ear_Left
-    100002: Ear_Right
-    100004: head1_head
-    100006: head1_neck
-    100008: Jaw
-    100010: leftLeg1_LoResFoot
-    100012: leftLeg1_LoResLowerLeg
-    100014: leftLeg1_LoResToe
-    100016: leftLeg1_LoResUpperLeg
-    100018: leftLeg2_LoResFoot
-    100020: leftLeg2_LoResLowerLeg
-    100022: leftLeg2_LoResToe
-    100024: leftLeg2_LoResUpperLeg
-    100026: Retopo_HP1
-    100028: Retopo_LP
-    100030: Retopo_SLP
-    100032: Rhimno_SHP
-    100034: //RootNode
-    100036: rightLeg1_LoResFoot
-    100038: rightLeg1_LoResLowerLeg
-    100040: rightLeg1_LoResToe
-    100042: rightLeg1_LoResUpperLeg
-    100044: rightLeg2_LoResFoot
-    100046: rightLeg2_LoResLowerLeg
-    100048: rightLeg2_LoResToe
-    100050: rightLeg2_LoResUpperLeg
-    100052: RootMotion
-    100054: spine1_loResPelvis
-    100056: spine1_loResSpine1
-    100058: spine1_loResSpine2
-    100060: spine1_loResSpine3
-    100062: tail1_Joint1
-    100064: tail1_Joint2
-    100066: tail1_Joint3
-    100068: tail1_Joint4
-    100070: tail1_Joint5
-    400000: Ear_Left
-    400002: Ear_Right
-    400004: head1_head
-    400006: head1_neck
-    400008: Jaw
-    400010: leftLeg1_LoResFoot
-    400012: leftLeg1_LoResLowerLeg
-    400014: leftLeg1_LoResToe
-    400016: leftLeg1_LoResUpperLeg
-    400018: leftLeg2_LoResFoot
-    400020: leftLeg2_LoResLowerLeg
-    400022: leftLeg2_LoResToe
-    400024: leftLeg2_LoResUpperLeg
-    400026: Retopo_HP1
-    400028: Retopo_LP
-    400030: Retopo_SLP
-    400032: Rhimno_SHP
-    400034: //RootNode
-    400036: rightLeg1_LoResFoot
-    400038: rightLeg1_LoResLowerLeg
-    400040: rightLeg1_LoResToe
-    400042: rightLeg1_LoResUpperLeg
-    400044: rightLeg2_LoResFoot
-    400046: rightLeg2_LoResLowerLeg
-    400048: rightLeg2_LoResToe
-    400050: rightLeg2_LoResUpperLeg
-    400052: RootMotion
-    400054: spine1_loResPelvis
-    400056: spine1_loResSpine1
-    400058: spine1_loResSpine2
-    400060: spine1_loResSpine3
-    400062: tail1_Joint1
-    400064: tail1_Joint2
-    400066: tail1_Joint3
-    400068: tail1_Joint4
-    400070: tail1_Joint5
-    4300000: Rhimno_SHP
-    4300002: Retopo_HP1
-    4300004: Retopo_SLP
-    4300006: Retopo_LP
-    7400000: Take 001
-    7400002: Bind Pose
-    7400004: Walk Sniffing
-    7400006: Run
-    7400008: Idle
-    7400010: Run Attack
-    7400012: Fight Idle
-    7400014: Attack Head Right
-    7400016: Attack Head Left
-    7400018: Eating
-    7400020: Walk
-    7400022: Walk Back
-    7400024: Idle Eating
-    7400026: Lie Down
-    7400028: Sleeping
-    7400030: Wake Up
-    7400032: Hit Left
-    7400034: Hit Right
-    7400036: Hit Up
-    7400038: Hit Back
-    7400040: Death
-    7400042: Death 01
-    9500000: //RootNode
-    13700000: Retopo_HP1
-    13700002: Retopo_LP
-    13700004: Retopo_SLP
-    13700006: Rhimno_SHP
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Ear_Left
+  - first:
+      1: 100002
+    second: Ear_Right
+  - first:
+      1: 100004
+    second: head1_head
+  - first:
+      1: 100006
+    second: head1_neck
+  - first:
+      1: 100008
+    second: Jaw
+  - first:
+      1: 100010
+    second: leftLeg1_LoResFoot
+  - first:
+      1: 100012
+    second: leftLeg1_LoResLowerLeg
+  - first:
+      1: 100014
+    second: leftLeg1_LoResToe
+  - first:
+      1: 100016
+    second: leftLeg1_LoResUpperLeg
+  - first:
+      1: 100018
+    second: leftLeg2_LoResFoot
+  - first:
+      1: 100020
+    second: leftLeg2_LoResLowerLeg
+  - first:
+      1: 100022
+    second: leftLeg2_LoResToe
+  - first:
+      1: 100024
+    second: leftLeg2_LoResUpperLeg
+  - first:
+      1: 100026
+    second: Retopo_HP1
+  - first:
+      1: 100028
+    second: Retopo_LP
+  - first:
+      1: 100030
+    second: Retopo_SLP
+  - first:
+      1: 100032
+    second: Rhimno_SHP
+  - first:
+      1: 100034
+    second: //RootNode
+  - first:
+      1: 100036
+    second: rightLeg1_LoResFoot
+  - first:
+      1: 100038
+    second: rightLeg1_LoResLowerLeg
+  - first:
+      1: 100040
+    second: rightLeg1_LoResToe
+  - first:
+      1: 100042
+    second: rightLeg1_LoResUpperLeg
+  - first:
+      1: 100044
+    second: rightLeg2_LoResFoot
+  - first:
+      1: 100046
+    second: rightLeg2_LoResLowerLeg
+  - first:
+      1: 100048
+    second: rightLeg2_LoResToe
+  - first:
+      1: 100050
+    second: rightLeg2_LoResUpperLeg
+  - first:
+      1: 100052
+    second: RootMotion
+  - first:
+      1: 100054
+    second: spine1_loResPelvis
+  - first:
+      1: 100056
+    second: spine1_loResSpine1
+  - first:
+      1: 100058
+    second: spine1_loResSpine2
+  - first:
+      1: 100060
+    second: spine1_loResSpine3
+  - first:
+      1: 100062
+    second: tail1_Joint1
+  - first:
+      1: 100064
+    second: tail1_Joint2
+  - first:
+      1: 100066
+    second: tail1_Joint3
+  - first:
+      1: 100068
+    second: tail1_Joint4
+  - first:
+      1: 100070
+    second: tail1_Joint5
+  - first:
+      4: 400000
+    second: Ear_Left
+  - first:
+      4: 400002
+    second: Ear_Right
+  - first:
+      4: 400004
+    second: head1_head
+  - first:
+      4: 400006
+    second: head1_neck
+  - first:
+      4: 400008
+    second: Jaw
+  - first:
+      4: 400010
+    second: leftLeg1_LoResFoot
+  - first:
+      4: 400012
+    second: leftLeg1_LoResLowerLeg
+  - first:
+      4: 400014
+    second: leftLeg1_LoResToe
+  - first:
+      4: 400016
+    second: leftLeg1_LoResUpperLeg
+  - first:
+      4: 400018
+    second: leftLeg2_LoResFoot
+  - first:
+      4: 400020
+    second: leftLeg2_LoResLowerLeg
+  - first:
+      4: 400022
+    second: leftLeg2_LoResToe
+  - first:
+      4: 400024
+    second: leftLeg2_LoResUpperLeg
+  - first:
+      4: 400026
+    second: Retopo_HP1
+  - first:
+      4: 400028
+    second: Retopo_LP
+  - first:
+      4: 400030
+    second: Retopo_SLP
+  - first:
+      4: 400032
+    second: Rhimno_SHP
+  - first:
+      4: 400034
+    second: //RootNode
+  - first:
+      4: 400036
+    second: rightLeg1_LoResFoot
+  - first:
+      4: 400038
+    second: rightLeg1_LoResLowerLeg
+  - first:
+      4: 400040
+    second: rightLeg1_LoResToe
+  - first:
+      4: 400042
+    second: rightLeg1_LoResUpperLeg
+  - first:
+      4: 400044
+    second: rightLeg2_LoResFoot
+  - first:
+      4: 400046
+    second: rightLeg2_LoResLowerLeg
+  - first:
+      4: 400048
+    second: rightLeg2_LoResToe
+  - first:
+      4: 400050
+    second: rightLeg2_LoResUpperLeg
+  - first:
+      4: 400052
+    second: RootMotion
+  - first:
+      4: 400054
+    second: spine1_loResPelvis
+  - first:
+      4: 400056
+    second: spine1_loResSpine1
+  - first:
+      4: 400058
+    second: spine1_loResSpine2
+  - first:
+      4: 400060
+    second: spine1_loResSpine3
+  - first:
+      4: 400062
+    second: tail1_Joint1
+  - first:
+      4: 400064
+    second: tail1_Joint2
+  - first:
+      4: 400066
+    second: tail1_Joint3
+  - first:
+      4: 400068
+    second: tail1_Joint4
+  - first:
+      4: 400070
+    second: tail1_Joint5
+  - first:
+      43: 4300000
+    second: Rhimno_SHP
+  - first:
+      43: 4300002
+    second: Retopo_HP1
+  - first:
+      43: 4300004
+    second: Retopo_SLP
+  - first:
+      43: 4300006
+    second: Retopo_LP
+  - first:
+      74: 7400000
+    second: Take 001
+  - first:
+      74: 7400002
+    second: Bind Pose
+  - first:
+      74: 7400004
+    second: Walk Sniffing
+  - first:
+      74: 7400006
+    second: Run
+  - first:
+      74: 7400008
+    second: Idle
+  - first:
+      74: 7400010
+    second: Run Attack
+  - first:
+      74: 7400012
+    second: Fight Idle
+  - first:
+      74: 7400014
+    second: Attack Head Right
+  - first:
+      74: 7400016
+    second: Attack Head Left
+  - first:
+      74: 7400018
+    second: Eating
+  - first:
+      74: 7400020
+    second: Walk
+  - first:
+      74: 7400022
+    second: Walk Back
+  - first:
+      74: 7400024
+    second: Idle Eating
+  - first:
+      74: 7400026
+    second: Lie Down
+  - first:
+      74: 7400028
+    second: Sleeping
+  - first:
+      74: 7400030
+    second: Wake Up
+  - first:
+      74: 7400032
+    second: Hit Left
+  - first:
+      74: 7400034
+    second: Hit Right
+  - first:
+      74: 7400036
+    second: Hit Up
+  - first:
+      74: 7400038
+    second: Hit Back
+  - first:
+      74: 7400040
+    second: Death
+  - first:
+      74: 7400042
+    second: Death 01
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Retopo_HP1
+  - first:
+      137: 13700002
+    second: Retopo_LP
+  - first:
+      137: 13700004
+    second: Retopo_SLP
+  - first:
+      137: 13700006
+    second: Rhimno_SHP
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Bind Pose
       takeName: 
+      internalID: 0
       firstFrame: 0
       lastFrame: 0
       wrapMode: 0
@@ -160,6 +373,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk Sniffing
       takeName: 
+      internalID: 0
       firstFrame: 2
       lastFrame: 48
       wrapMode: 0
@@ -188,6 +402,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Run
       takeName: 
+      internalID: 0
       firstFrame: 51
       lastFrame: 65
       wrapMode: 0
@@ -196,7 +411,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 1
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -216,6 +431,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle
       takeName: 
+      internalID: 0
       firstFrame: 68
       lastFrame: 168
       wrapMode: 0
@@ -224,7 +440,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 1
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -244,6 +460,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Run Attack
       takeName: 
+      internalID: 0
       firstFrame: 171
       lastFrame: 200
       wrapMode: 0
@@ -272,6 +489,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Fight Idle
       takeName: 
+      internalID: 0
       firstFrame: 203
       lastFrame: 232
       wrapMode: 0
@@ -300,6 +518,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack Head Right
       takeName: 
+      internalID: 0
       firstFrame: 235
       lastFrame: 265
       wrapMode: 0
@@ -328,6 +547,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack Head Left
       takeName: 
+      internalID: 0
       firstFrame: 268
       lastFrame: 299
       wrapMode: 0
@@ -356,6 +576,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Eating
       takeName: 
+      internalID: 0
       firstFrame: 302
       lastFrame: 342
       wrapMode: 0
@@ -384,6 +605,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk
       takeName: 
+      internalID: 0
       firstFrame: 345
       lastFrame: 391
       wrapMode: 0
@@ -412,6 +634,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk Back
       takeName: 
+      internalID: 0
       firstFrame: 394
       lastFrame: 439
       wrapMode: 0
@@ -440,6 +663,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle Eating
       takeName: 
+      internalID: 0
       firstFrame: 442
       lastFrame: 502
       wrapMode: 0
@@ -468,6 +692,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Lie Down
       takeName: 
+      internalID: 0
       firstFrame: 504
       lastFrame: 562
       wrapMode: 0
@@ -496,6 +721,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Sleeping
       takeName: 
+      internalID: 0
       firstFrame: 563
       lastFrame: 510
       wrapMode: 0
@@ -524,6 +750,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Wake Up
       takeName: 
+      internalID: 0
       firstFrame: 611
       lastFrame: 664
       wrapMode: 0
@@ -552,6 +779,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Hit Left
       takeName: 
+      internalID: 0
       firstFrame: 666
       lastFrame: 683
       wrapMode: 0
@@ -580,6 +808,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Hit Right
       takeName: 
+      internalID: 0
       firstFrame: 684
       lastFrame: 702
       wrapMode: 0
@@ -608,6 +837,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Hit Up
       takeName: 
+      internalID: 0
       firstFrame: 703
       lastFrame: 720
       wrapMode: 0
@@ -636,6 +866,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Hit Back
       takeName: 
+      internalID: 0
       firstFrame: 721
       lastFrame: 739
       wrapMode: 0
@@ -664,6 +895,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Death
       takeName: 
+      internalID: 0
       firstFrame: 740
       lastFrame: 763
       wrapMode: 0
@@ -692,6 +924,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Death 01
       takeName: 
+      internalID: 0
       firstFrame: 764
       lastFrame: 790
       wrapMode: 0
@@ -723,26 +956,49 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -752,14 +1008,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: RootMotion
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

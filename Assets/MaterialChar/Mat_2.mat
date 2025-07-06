@@ -8,15 +8,17 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mat_2
-  m_Shader: {fileID: 4800000, guid: 900c1dc9f254377408ec79aaac14c26b, type: 3}
+  m_Shader: {fileID: 4800000, guid: d27f7c6b7f2d9ba4f81f50a707ccc961, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _ALBEDOVERTEXCOLORMODE_REPLACE
   - _COLORRAMPLIGHTINGSTAGE_BEFORELIGHTING
+  - _GLITCHWORLDSPACE_ON
   - _GREYSCALESTAGE_BEFORELIGHTING
   - _HEIGHTGRADIENTPOSITIONSPACE_LOCAL
-  - _LIGHTMODEL_FASTLIGHTING
+  - _LIGHTMODEL_NONE
   - _MATCAPBLENDMODE_MULTIPLY
   - _OUTLINETYPE_SIMPLE
   - _REFLECTIONS_NONE
@@ -27,8 +29,6 @@ Material:
   - _TEXTUREBLENDINGSOURCE_VERTEXCOLOR
   - _TRIPLANARNORMALSPACE_WORLD
   - _USE_WIND_VERTICAL_MASK
-  m_InvalidKeywords:
-  - _GLITCHWORLDSPACE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -91,7 +91,7 @@ Material:
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 5ad774b6e4b234647a93f373440486de, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: -1}
+        m_Offset: {x: 0, y: 0}
     - _MatcapTex:
         m_Texture: {fileID: 2800000, guid: cf3a2315564d4de4eb8601b697dea358, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -244,7 +244,7 @@ Material:
     - _IntersectionFadeFactor: 1
     - _IntersectionFadeOn: 0
     - _IntersectionGlowOn: 0
-    - _LightModel: 6
+    - _LightModel: 0
     - _LightmapColorCorrection: 0
     - _Matcap: 0
     - _MatcapBlend: 1
@@ -268,10 +268,11 @@ Material:
     - _NormalMapEnabled: 0
     - _NormalStrength: 1
     - _OcclusionStrength: 1
-    - _Outline: 0.07
+    - _Outline: 0.0586
     - _OutlineMode: 6
     - _OutlineThickness: 5
     - _OutlineType: 1
+    - _OutlineWidth: 0.05
     - _Parallax: 0.02
     - _Pixelate: 0
     - _PixelateSize: 32
