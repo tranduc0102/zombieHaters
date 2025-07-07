@@ -418,7 +418,6 @@ public class GameManager : MonoBehaviour
 				float num2 = UnityEngine.Random.Range(-0.5f, 0.5f);
 				UnityEngine.Object.Instantiate(DataLoader.Instance.GetSurvivorPrefab(DataLoader.Instance.survivors[j].heroType), new Vector3(position.x + num, position.y, position.z + num2), default(Quaternion), TransformParentManager.Instance.heroes);
 				DataLoader.Instance.startSquad[j]++;
-				Debug.LogError("XXXX");
 			}
 		}
 		cameraTarget.transform.position = position;
