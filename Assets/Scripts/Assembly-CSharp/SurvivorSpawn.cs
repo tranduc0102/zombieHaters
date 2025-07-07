@@ -13,9 +13,9 @@ public class SurvivorSpawn : PointOnMap
 	public void Spawn()
 	{
 		newSurvivor = Object.Instantiate(SpawnManager.instance.GetNewSurvivor(), base.transform.position, default(Quaternion));
-	}
+    }
 
-	public bool isReady()
+    public bool isReady()
 	{
 		if (newSurvivor == null && openAtLevel <= DataLoader.Instance.GetCurrentPlayerLevel() && worldNumber == GameManager.instance.currentWorldNumber)
 		{

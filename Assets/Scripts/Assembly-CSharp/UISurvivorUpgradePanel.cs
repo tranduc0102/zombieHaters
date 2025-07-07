@@ -32,6 +32,16 @@ public class UISurvivorUpgradePanel : UIBaseScrollPanel<SurviviorContent>
 			}
 		}
 	}
+	public void UpdateAllSelected(List<int> data)
+	{
+		if (dataArray != null && dataArray.Length > 0)
+		{
+			for (int i = 0; i < dataArray.Length; i++)
+			{
+				dataArray[i].SetUpSelected(data);
+			}
+		}
+	}
 
 	public void SetRandomVideo()
 	{

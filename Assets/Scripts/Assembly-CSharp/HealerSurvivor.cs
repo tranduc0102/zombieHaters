@@ -45,6 +45,7 @@ public class HealerSurvivor : SoldierSurvivor
 		SurvivorHuman survivorHuman = null;
 		foreach (SurvivorHuman survivor in GameManager.instance.survivors)
 		{
+			if (survivor == null) continue;
 			if (survivor != this && Vector3.Distance(survivor.transform.position, base.transform.position) <= healDistance && (survivorHuman == null || Vector3.Distance(survivor.transform.position, base.transform.position) < Vector3.Distance(survivorHuman.transform.position, base.transform.position)))
 			{
 				SurvivorHuman survivorHuman2 = survivor;

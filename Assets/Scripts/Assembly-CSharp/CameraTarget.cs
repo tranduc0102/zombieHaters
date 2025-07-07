@@ -28,12 +28,10 @@ public class CameraTarget : MonoBehaviour
 			Vector3 vector = default(Vector3);
 			foreach (SurvivorHuman survivor in GameManager.instance.survivors)
 			{
-				if (!(survivor == null))
-				{
-					vector += survivor.transform.position;
-				}
-			}
-			base.transform.position = vector / GameManager.instance.survivors.Count;
+				if (survivor == null) continue;
+                vector += survivor.transform.position;
+            }
+            base.transform.position = vector / GameManager.instance.survivors.Count;
 		}
 	}
 }

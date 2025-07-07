@@ -1,7 +1,9 @@
+using DG.Tweening;
+using IAP;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using IAP;
 using UnityEngine;
 using GUI = GuiInGame.GUI;
 public class DataLoader : MonoBehaviour
@@ -87,9 +89,13 @@ public class DataLoader : MonoBehaviour
 	[NonSerialized]
 	public double inGameMoneyCounter;
 
+	[HideInInspector]
+	public int[] survivorHumansSelected;
+
 	private DateTime lastCheatDt = DateTime.MinValue;
 
 	public static DataLoader Instance { get; private set; }
+
 
     private void Awake()
 	{
@@ -113,7 +119,8 @@ public class DataLoader : MonoBehaviour
         SetExperienceLevels();
 		SetMoneyBoxData();
 		FillZombiesPrefabData();
-		dataUpdateManager = UnityEngine.Object.FindObjectOfType<DataUpdateManager>();
+		FillDataSelectedSurvivor();
+        dataUpdateManager = UnityEngine.Object.FindObjectOfType<DataUpdateManager>();
 		notifManger = UnityEngine.Object.FindObjectOfType<NotificationManager>();
 		hidingObjects = null;
 		LoadingScene loadingScene = UnityEngine.Object.FindObjectOfType<LoadingScene>();
@@ -205,6 +212,8 @@ public class DataLoader : MonoBehaviour
             CsvLoader.SplitText(survivorDamage, ',', ref array3);
             CsvLoader.SplitText(survivorHP, ',', ref array4);
             int[] array5 = new int[10] { 0, 1, 2, 3, 4, 6, 8, 5, 7, 9};
+
+
             for (int i = 0; i < survivors.Count; i++)
             {
                 for (int j = 0; j < array.GetLength(1); j++)
@@ -321,7 +330,57 @@ public class DataLoader : MonoBehaviour
 	        Debug.LogError("Lỗi FillZombiesPrefabData: " + ex);
         }
     }
+    private void FillDataSelectedSurvivor()
+    {
+        try
+        {
+            int[] loaded = LoadSelectedSurvivor();
+            if (loaded != null)
+            {
+                survivorHumansSelected = loaded;
+                return;
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError("Lỗi FillDataSelectedSurvivor: " + ex);
+        }
+    }
+    public void SaveSelectedSurvivor(SaveData.HeroData.HeroType[] selected)
+    {
+        if (selected == null) return;
 
+        int[] result = Enumerable.Repeat(-1, 4).ToArray();
+
+        for (int i = 0; i < selected.Length && i < 4; i++)
+        {
+            result[i] = (int)selected[i];
+        }
+
+        string data = string.Join(",", result);
+        PlayerPrefs.SetString("SelectedSurvivor", data);
+        PlayerPrefs.Save();
+	}
+
+    private int[] LoadSelectedSurvivor()
+    {
+        if (!PlayerPrefs.HasKey("SelectedSurvivor"))
+        {
+            PlayerPrefs.SetString("SelectedSurvivor", "0,-1,-1,-1");
+            PlayerPrefs.Save();
+        }
+        string data = PlayerPrefs.GetString("SelectedSurvivor");
+        var arr = data.Split(',');
+        int[] result = Enumerable.Repeat(-1, 4).ToArray();
+        for (int i = 0; i < arr.Length && i < 4; i++)
+        {
+            if (int.TryParse(arr[i], out int value))
+            {
+                result[i] = value;
+            }
+        }
+        return result;
+    }
     private void SetZombiePrefabData()
 	{
 		for (int i = 0; i < zombiePrefabData.Count; i++)

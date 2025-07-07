@@ -1,6 +1,8 @@
+﻿using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -118,6 +120,10 @@ public class GameManager : MonoBehaviour
 	public GameModes currentGameMode { get; private set; }
 
 	public float allHeroPowers { get; private set; }
+
+
+	[HideInInspector]
+	public List<SaveData.HeroData.HeroType> dataSelecteds = new List<SaveData.HeroData.HeroType> { };
 
 	private void Awake()
 	{
@@ -370,10 +376,11 @@ public class GameManager : MonoBehaviour
 			allHeroPowers += DataLoader.Instance.GetHeroPower(DataLoader.playerData.heroData[i].heroType);
 		}
 	}
-
+	public Vector3 Position => position;
+	private Vector3 position;
 	private void SpawnStartSquad()
 	{
-		Vector3 position = Vector3.zero;
+		position = Vector3.zero;
 		if (!isTutorialNow)
 		{
 			List<StartPoint> list = new List<StartPoint>();
@@ -395,8 +402,8 @@ public class GameManager : MonoBehaviour
 				position = list[index].transform.position;
 				this.startPoint = list[index];
 			}
-		}
-		else
+        }
+        else
 		{
 			position = tutorialStartPoint.position;
 		}
@@ -409,18 +416,81 @@ public class GameManager : MonoBehaviour
 			protectDome.position = position;
 			protectDome.gameObject.SetActive(true);
 		}
-		DataLoader.Instance.startSquad = new int[Enum.GetValues(typeof(SaveData.HeroData.HeroType)).Length];
-		for (int j = 0; j < DataLoader.Instance.survivors.Count; j++)
-		{
-			if (DataLoader.playerData.IsHeroOpened(DataLoader.Instance.survivors[j].heroType))
-			{
-				float num = UnityEngine.Random.Range(-0.5f, 0.5f);
-				float num2 = UnityEngine.Random.Range(-0.5f, 0.5f);
-				UnityEngine.Object.Instantiate(DataLoader.Instance.GetSurvivorPrefab(DataLoader.Instance.survivors[j].heroType), new Vector3(position.x + num, position.y, position.z + num2), default(Quaternion), TransformParentManager.Instance.heroes);
-				DataLoader.Instance.startSquad[j]++;
-			}
-		}
-		cameraTarget.transform.position = position;
+        var dataSelecteds = new HashSet<SaveData.HeroData.HeroType>();
+        DataLoader.Instance.startSquad = new int[Enum.GetValues(typeof(SaveData.HeroData.HeroType)).Length];
+
+        var dataSelected = DataLoader.Instance.survivorHumansSelected;
+        int maxCountSelected = 4;
+        int countSelected = 0;
+
+        // 1. Spawn theo dữ liệu đã lưu (survivorHumansSelected)
+        foreach (var heroIndex in dataSelected)
+        {
+            if (heroIndex == -1) continue;
+
+            var heroType = (SaveData.HeroData.HeroType)heroIndex;
+
+            if (dataSelecteds.Contains(heroType)) continue; // đã spawn rồi
+
+            Vector3 offset = new Vector3(
+                UnityEngine.Random.Range(-0.5f, 0.5f),
+                0f,
+                UnityEngine.Random.Range(-0.5f, 0.5f)
+            );
+
+            UnityEngine.Object.Instantiate(
+                DataLoader.Instance.GetSurvivorPrefab(heroType),
+                position + offset,
+                Quaternion.identity,
+                TransformParentManager.Instance.heroes
+            );
+
+            dataSelecteds.Add(heroType);
+            DataLoader.Instance.startSquad[(int)heroType]++;
+            countSelected++;
+
+            if (countSelected >= maxCountSelected) break;
+        }
+        if (countSelected < maxCountSelected)
+        {
+            foreach (var survivor in DataLoader.Instance.survivors)
+            {
+                var heroType = survivor.heroType;
+
+                if (countSelected >= maxCountSelected) break;
+
+                if (DataLoader.playerData.IsHeroOpened(heroType) && !dataSelecteds.Contains(heroType))
+                {
+                    Vector3 offset = new Vector3(
+                        UnityEngine.Random.Range(-0.5f, 0.5f),
+                        0f,
+                        UnityEngine.Random.Range(-0.5f, 0.5f)
+                    );
+
+                    UnityEngine.Object.Instantiate(
+                        DataLoader.Instance.GetSurvivorPrefab(heroType),
+                        position + offset,
+                        Quaternion.identity,
+                        TransformParentManager.Instance.heroes
+                    );
+
+                    dataSelecteds.Add(heroType);
+                    DataLoader.Instance.startSquad[(int)heroType]++;
+                    countSelected++;
+                }
+            }
+        }
+        SaveData.HeroData.HeroType[] heroTypes = dataSelecteds
+           .Select(i => (SaveData.HeroData.HeroType)i)
+           .ToArray();
+        DataLoader.Instance.SaveSelectedSurvivor(heroTypes);
+        List<int> selectedHeroIndices = dataSelecteds.Select(h => (int)h).ToList();
+        DOVirtual.DelayedCall(0.1f, delegate
+        {
+            UIController.instance.scrollControllers.survivorsController.UpdateAllSelected(selectedHeroIndices);
+        });
+        Debug.LogError(PlayerPrefs.GetString("SelectedSurvivor"));
+        cameraTarget.transform.position = position;
 		cameraTarget.enabled = true;
 		if (!isTutorialNow && currentGameMode == GameModes.Idle)
 		{
