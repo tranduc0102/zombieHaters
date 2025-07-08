@@ -56,7 +56,7 @@ MonoBehaviour:
   countHealth: 47700
   maxCountHealth: 0
   deathSounds:
-  - {fileID: 8300000, guid: a3cd2012d56b3a5448ffffb13f6c6678, type: 3}
+  - {fileID: 8300000, guid: e815ed74d72426e408d142bc92dfe52e, type: 3}
   isActive: 1
   damageDelay: 1
   size: 2
@@ -64,9 +64,9 @@ MonoBehaviour:
   damage: 10
   power: 10053.792
   defaultSpeed: 0
-  attackSound: {fileID: 8300000, guid: c43c842a9b3aac34fa8d9886e8b67f3e, type: 3}
+  attackSound: {fileID: 8300000, guid: 34e6e77607aab6a41bfe73c97692f420, type: 3}
   roarSounds:
-  - {fileID: 8300000, guid: 7ae95ec3c62e4eb41938fc5334142207, type: 3}
+  - {fileID: 8300000, guid: 4dd1e4ef817917c4aab1854c9718d93b, type: 3}
   myNameIs: Ray
 --- !u!54 &54529393496414814
 Rigidbody:
@@ -21387,7 +21387,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6331516412479208565}
   - component: {fileID: 3214150215252142312}
-  - component: {fileID: 5594919940055300255}
   m_Layer: 9
   m_Name: Brachiosaurus
   m_TagString: Creature
@@ -21433,190 +21432,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5594919940055300255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7988174474273234032}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ebab45086494046975d720ba6fe95e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useAI: 0
-  pathEditor: []
-  nextPath: 0
-  targetEditor: []
-  bodyTexture: 0
-  eyesTexture: 0
-  health: 100
-  water: 100
-  food: 100
-  stamina: 100
-  damageMultiplier: 1
-  armorMultiplier: 1
-  animSpeed: 1
-  herbivorous: 1
-  canAttack: 0
-  canHeadAttack: 0
-  canTailAttack: 0
-  canWalk: 1
-  canJump: 0
-  canFly: 0
-  canSwim: 0
-  lowAltitude: 0
-  canInvertBody: 0
-  baseMass: 26000
-  ang_T: 0.01
-  crouch_Max: 4
-  yaw_Max: 10
-  pitch_Max: 8
-  body: {fileID: 0}
-  lod: {fileID: 0}
-  anm: {fileID: 3214150215252142312}
-  source:
-  - {fileID: 0}
-  - {fileID: 0}
-  rend:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 8611825312896189675}
-  skin:
-  - {fileID: 2800000, guid: 0e04e24dbf162024dbf8e47f5a8979dd, type: 3}
-  - {fileID: 2800000, guid: 129fd2fc171ffcd4daf1882947a7a401, type: 3}
-  - {fileID: 2800000, guid: 021b6eaa960c2d34cb8286c85e4b3166, type: 3}
-  eyes:
-  - {fileID: 2800000, guid: 0749ffe3e19e141489caff4cfdee7ff8, type: 3}
-  - {fileID: 2800000, guid: e44170da555f4d5419bfc19eae61fd78, type: 3}
-  - {fileID: 2800000, guid: 2c60a3361e2eaf14da9b552dc5b1620e, type: 3}
-  - {fileID: 2800000, guid: 7568b84bb9fe4e2448b9a4af2a6ab881, type: 3}
-  - {fileID: 2800000, guid: 5845805cc9b407446939267521b931df, type: 3}
-  - {fileID: 2800000, guid: 136cf5ae53f132b4f9c15d8d830ee18b, type: 3}
-  - {fileID: 2800000, guid: d973c9172cd1edf4ca621ed6555768d1, type: 3}
-  - {fileID: 2800000, guid: efc24bc706fc63041aa29ff309fe335a, type: 3}
-  - {fileID: 2800000, guid: 3ec19de5cec51bd4d96a8bb727625d01, type: 3}
-  - {fileID: 2800000, guid: bd50a80bf79805d41856b2c58ccd826b, type: 3}
-  - {fileID: 2800000, guid: 6520e1abf36abb54e8ba6909ec3a4bc9, type: 3}
-  - {fileID: 2800000, guid: b54283945f2b91b4fae72a6264a7b264, type: 3}
-  - {fileID: 2800000, guid: b204a159b445efa4bb1212392e67316c, type: 3}
-  - {fileID: 2800000, guid: f26fff52d1ee9e2488a0a01344706b76, type: 3}
-  - {fileID: 2800000, guid: 560f5cfd85a3a6541aa4cc1dd5b4b775, type: 3}
-  - {fileID: 2800000, guid: 391f6d09dc418914e906ac1fc19df7c9, type: 3}
-  Head: {fileID: 9145405665831267722}
-  main: {fileID: 0}
-  isActive: 0
-  isVisible: 0
-  isDead: 0
-  isOnGround: 0
-  isOnWater: 0
-  isInWater: 0
-  isConstrained: 0
-  isOnLevitation: 0
-  onAttack: 0
-  onJump: 0
-  onCrouch: 0
-  onReset: 0
-  onInvert: 0
-  onHeadMove: 0
-  onAutoLook: 0
-  onTailAttack: 0
-  rndX: 0
-  rndY: 0
-  rndMove: 0
-  rndIdle: 0
-  loop: 43
-  behavior: 
-  specie: Brach
-  objTGT: {fileID: 0}
-  objCOL: {fileID: 0}
-  headPos: {x: 0, y: 0, z: 0}
-  posCOL: {x: 0, y: 0, z: 0}
-  posTGT: {x: 0, y: 0, z: 0}
-  lookTGT: {x: 0, y: 0, z: 0}
-  boxscale: {x: 1.6909034, y: 6.5206933, z: 6.7223654}
-  normal: {x: 0, y: 0, z: 0}
-  angTGT: {x: 0, y: 0, z: 0, w: 1}
-  normAng: {x: 0, y: 0, z: 0, w: 1}
-  currframe: 0
-  lastframe: 0
-  lastHit: 0
-  crouch: 0
-  spineX: 0
-  spineY: 0
-  headX: 0
-  headY: 0
-  pitch: 0
-  roll: 0
-  reverse: 0
-  posY: 0
-  waterY: -65536
-  withersSize: 4.762721
-  size: 0
-  speed: 0
-  behaviorCount: 0
-  distTGT: 0
-  delta: 0
-  actionDist: 0
-  angleAdd: 0
-  avoidDelta: 0
-  avoidAdd: 0
-  Spine0: {fileID: 89286270010910319}
-  Spine1: {fileID: 649385084454562202}
-  Spine2: {fileID: 971874648458782683}
-  Spine3: {fileID: 6114768020875876705}
-  Spine4: {fileID: 5609492136022933803}
-  Tail0: {fileID: 1081051909368516423}
-  Tail1: {fileID: 7504631121130108234}
-  Tail2: {fileID: 5235427941570605762}
-  Tail3: {fileID: 3862579664828967342}
-  Tail4: {fileID: 8513094675510414259}
-  Tail5: {fileID: 4072839144371010031}
-  Tail6: {fileID: 3986576504912623729}
-  Tail7: {fileID: 5862179433340334280}
-  Tail8: {fileID: 5489606329827006754}
-  Neck0: {fileID: 7636120488789564575}
-  Neck1: {fileID: 4697796035710932615}
-  Neck2: {fileID: 7192852445408442915}
-  Neck3: {fileID: 106847775749289170}
-  Neck4: {fileID: 7016403646301685804}
-  Neck5: {fileID: 4484484124580313422}
-  Neck6: {fileID: 6005265415925258425}
-  Neck7: {fileID: 6355778497734813041}
-  Neck8: {fileID: 346559482727342278}
-  Neck9: {fileID: 7237321892314950194}
-  Neck10: {fileID: 7573292323809971349}
-  Neck11: {fileID: 6677417550028872326}
-  Neck12: {fileID: 2050954225585940258}
-  Neck13: {fileID: 1579533461173423928}
-  Neck14: {fileID: 544640247342596269}
-  Neck15: {fileID: 6881318600263303268}
-  Neck16: {fileID: 340592747947511583}
-  Left_Arm0: {fileID: 1219531967674358067}
-  Right_Arm0: {fileID: 9153506915589470816}
-  Left_Arm1: {fileID: 7929897779696638967}
-  Right_Arm1: {fileID: 9080490878573792845}
-  Left_Hand: {fileID: 1194482906282664857}
-  Right_Hand: {fileID: 2711277462909039651}
-  Left_Hips: {fileID: 8419875707022231459}
-  Right_Hips: {fileID: 6234774449530142981}
-  Left_Leg: {fileID: 5179660912315117608}
-  Right_Leg: {fileID: 26413129593129662}
-  Left_Foot: {fileID: 3410928832736783745}
-  Right_Foot: {fileID: 4024485044105289836}
-  Waterflush: {fileID: 8300000, guid: abdd9ee77d0620341977b1d42cbb270c, type: 3}
-  Hit_jaw: {fileID: 8300000, guid: 2cdeb47744b25e348ba11efab424fde4, type: 3}
-  Hit_head: {fileID: 8300000, guid: b0659bba43eb86f4dab034dd1803e372, type: 3}
-  Hit_tail: {fileID: 8300000, guid: c4748159a2d67d540ab8ad33bda91b31, type: 3}
-  Largestep: {fileID: 8300000, guid: a2bf8fefb1d8bd54cbfa5dfb4051560a, type: 3}
-  Largesplash: {fileID: 8300000, guid: aa9fe390bef187246997f611b9b4cebf, type: 3}
-  Idleherb: {fileID: 8300000, guid: 30b506deea06d2f408ca1d94348b4045, type: 3}
-  Chew: {fileID: 8300000, guid: 948226ec7966d0a4480107f99777e9c8, type: 3}
-  Brach1: {fileID: 8300000, guid: e815ed74d72426e408d142bc92dfe52e, type: 3}
-  Brach2: {fileID: 8300000, guid: 4dd1e4ef817917c4aab1854c9718d93b, type: 3}
-  Brach3: {fileID: 8300000, guid: 112e8523cb7750d4bba133a5a56d336f, type: 3}
-  Brach4: {fileID: 8300000, guid: ee5edd40dbbbbb0449524e8e530fbe25, type: 3}
 --- !u!1 &8176971915144362286
 GameObject:
   m_ObjectHideFlags: 0

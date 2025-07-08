@@ -19289,7 +19289,7 @@ MonoBehaviour:
   countHealth: 49895790
   maxCountHealth: 0
   deathSounds:
-  - {fileID: 8300000, guid: a3cd2012d56b3a5448ffffb13f6c6678, type: 3}
+  - {fileID: 8300000, guid: 31c350ffc6e3ae44e9737fbaf2dfacb0, type: 3}
   isActive: 1
   damageDelay: 1
   size: 2
@@ -19297,9 +19297,9 @@ MonoBehaviour:
   damage: 10
   power: 419679.6
   defaultSpeed: 0
-  attackSound: {fileID: 8300000, guid: c43c842a9b3aac34fa8d9886e8b67f3e, type: 3}
+  attackSound: {fileID: 8300000, guid: 34e6e77607aab6a41bfe73c97692f420, type: 3}
   roarSounds:
-  - {fileID: 8300000, guid: 7ae95ec3c62e4eb41938fc5334142207, type: 3}
+  - {fileID: 8300000, guid: 7166f8611f17a554c8508723bb661ee5, type: 3}
   myNameIs: Sister Scarrie
 --- !u!54 &54510094626724284
 Rigidbody:
@@ -20228,7 +20228,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8115307925189068368}
   - component: {fileID: 848451556727537773}
-  - component: {fileID: 371009567280463310}
   m_Layer: 9
   m_Name: Tyrannosaurus Rex
   m_TagString: Creature
@@ -20274,168 +20273,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &371009567280463310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4072104459718408757}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4efbc9838945d464f86bc89bcb63c58f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useAI: 0
-  pathEditor: []
-  nextPath: 0
-  targetEditor: []
-  bodyTexture: 0
-  eyesTexture: 0
-  health: 100
-  water: 100
-  food: 100
-  stamina: 100
-  damageMultiplier: 1
-  armorMultiplier: 1
-  animSpeed: 1
-  herbivorous: 0
-  canAttack: 1
-  canHeadAttack: 0
-  canTailAttack: 0
-  canWalk: 1
-  canJump: 0
-  canFly: 0
-  canSwim: 0
-  lowAltitude: 0
-  canInvertBody: 0
-  baseMass: 6000
-  ang_T: 0.035
-  crouch_Max: 4
-  yaw_Max: 25
-  pitch_Max: 12
-  body: {fileID: 0}
-  lod: {fileID: 0}
-  anm: {fileID: 848451556727537773}
-  source:
-  - {fileID: 0}
-  - {fileID: 0}
-  rend:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 8572580766003297577}
-  skin:
-  - {fileID: 2800000, guid: 7fc904c90c804be40bcb2ae9e2de406b, type: 3}
-  - {fileID: 2800000, guid: bbeb9017b69bee2488611eac213c980b, type: 3}
-  - {fileID: 2800000, guid: a333ed5807bd9c64eadea75350c2f230, type: 3}
-  eyes:
-  - {fileID: 2800000, guid: 0749ffe3e19e141489caff4cfdee7ff8, type: 3}
-  - {fileID: 2800000, guid: e44170da555f4d5419bfc19eae61fd78, type: 3}
-  - {fileID: 2800000, guid: 2c60a3361e2eaf14da9b552dc5b1620e, type: 3}
-  - {fileID: 2800000, guid: 7568b84bb9fe4e2448b9a4af2a6ab881, type: 3}
-  - {fileID: 2800000, guid: 5845805cc9b407446939267521b931df, type: 3}
-  - {fileID: 2800000, guid: 136cf5ae53f132b4f9c15d8d830ee18b, type: 3}
-  - {fileID: 2800000, guid: d973c9172cd1edf4ca621ed6555768d1, type: 3}
-  - {fileID: 2800000, guid: efc24bc706fc63041aa29ff309fe335a, type: 3}
-  - {fileID: 2800000, guid: 3ec19de5cec51bd4d96a8bb727625d01, type: 3}
-  - {fileID: 2800000, guid: bd50a80bf79805d41856b2c58ccd826b, type: 3}
-  - {fileID: 2800000, guid: 6520e1abf36abb54e8ba6909ec3a4bc9, type: 3}
-  - {fileID: 2800000, guid: b54283945f2b91b4fae72a6264a7b264, type: 3}
-  - {fileID: 2800000, guid: b204a159b445efa4bb1212392e67316c, type: 3}
-  - {fileID: 2800000, guid: f26fff52d1ee9e2488a0a01344706b76, type: 3}
-  - {fileID: 2800000, guid: 560f5cfd85a3a6541aa4cc1dd5b4b775, type: 3}
-  - {fileID: 2800000, guid: 391f6d09dc418914e906ac1fc19df7c9, type: 3}
-  Head: {fileID: 4358738033462589480}
-  main: {fileID: 0}
-  isActive: 0
-  isVisible: 0
-  isDead: 0
-  isOnGround: 0
-  isOnWater: 0
-  isInWater: 0
-  isConstrained: 0
-  isOnLevitation: 0
-  onAttack: 0
-  onJump: 0
-  onCrouch: 0
-  onReset: 0
-  onInvert: 0
-  onHeadMove: 0
-  onAutoLook: 0
-  onTailAttack: 0
-  rndX: 0
-  rndY: 0
-  rndMove: 0
-  rndIdle: 0
-  loop: 41
-  behavior: 
-  specie: Rex
-  objTGT: {fileID: 0}
-  objCOL: {fileID: 0}
-  headPos: {x: 0, y: 0, z: 0}
-  posCOL: {x: 0, y: 0, z: 0}
-  posTGT: {x: 0, y: 0, z: 0}
-  lookTGT: {x: 0, y: 0, z: 0}
-  boxscale: {x: 1.1859889, y: 1.9439937, z: 5.4487143}
-  normal: {x: 0, y: 0, z: 0}
-  angTGT: {x: 0, y: 0, z: 0, w: 1}
-  normAng: {x: 0, y: 0, z: 0, w: 1}
-  currframe: 0
-  lastframe: 0
-  lastHit: 0
-  crouch: 0
-  spineX: 0
-  spineY: 0
-  headX: 0
-  headY: 0
-  pitch: 0
-  roll: 0
-  reverse: 0
-  posY: 0
-  waterY: -65536
-  withersSize: 3.2298884
-  size: 0
-  speed: 0
-  behaviorCount: 0
-  distTGT: 0
-  delta: 0
-  actionDist: 0
-  angleAdd: 0
-  avoidDelta: 0
-  avoidAdd: 0
-  Spine0: {fileID: 2728146934037252482}
-  Spine1: {fileID: 7351522846240366287}
-  Spine2: {fileID: 4456633874503868599}
-  Neck0: {fileID: 741734883806599406}
-  Neck1: {fileID: 2655276955901674895}
-  Neck2: {fileID: 3079454496208856041}
-  Tail2: {fileID: 3199169408777186648}
-  Tail3: {fileID: 1228369366046096186}
-  Tail4: {fileID: 5742801851034147580}
-  Tail5: {fileID: 5348880814332114435}
-  Tail6: {fileID: 2347531607357619056}
-  Left_Hips: {fileID: 1404492315380692409}
-  Right_Hips: {fileID: 6232411108844798349}
-  Left_Leg: {fileID: 1095848570463811034}
-  Right_Leg: {fileID: 2464663027044333780}
-  Left_Foot0: {fileID: 7694366522807806641}
-  Right_Foot0: {fileID: 2058092159861950007}
-  Waterflush: {fileID: 8300000, guid: abdd9ee77d0620341977b1d42cbb270c, type: 3}
-  Hit_jaw: {fileID: 8300000, guid: 2cdeb47744b25e348ba11efab424fde4, type: 3}
-  Hit_head: {fileID: 8300000, guid: b0659bba43eb86f4dab034dd1803e372, type: 3}
-  Hit_tail: {fileID: 8300000, guid: c4748159a2d67d540ab8ad33bda91b31, type: 3}
-  Bigstep: {fileID: 8300000, guid: aa04c0f697c721f438fc9361cadbb6d1, type: 3}
-  Largesplash: {fileID: 8300000, guid: aa9fe390bef187246997f611b9b4cebf, type: 3}
-  Largestep: {fileID: 8300000, guid: a2bf8fefb1d8bd54cbfa5dfb4051560a, type: 3}
-  Idlecarn: {fileID: 8300000, guid: 09fa44cb202a00e4d9d249d2ae99c1d7, type: 3}
-  Bite: {fileID: 8300000, guid: 34e6e77607aab6a41bfe73c97692f420, type: 3}
-  Swallow: {fileID: 8300000, guid: 850c96bc8498eaa4a8d5e9789ab8ee22, type: 3}
-  Sniff1: {fileID: 8300000, guid: 8d3910f04fdbd5a4d8bbba4b17d8faf1, type: 3}
-  Rex1: {fileID: 8300000, guid: 7166f8611f17a554c8508723bb661ee5, type: 3}
-  Rex2: {fileID: 8300000, guid: 0b680b8347f1a1a4fadd7f46df72d93d, type: 3}
-  Rex3: {fileID: 8300000, guid: 57593724202a20d4eb19382867dc8b7f, type: 3}
-  Rex4: {fileID: 8300000, guid: 31c350ffc6e3ae44e9737fbaf2dfacb0, type: 3}
-  Rex5: {fileID: 8300000, guid: 2ed0b9f7ee4738f45aee8cbcccff2d5d, type: 3}
 --- !u!1 &4113186405171949390
 GameObject:
   m_ObjectHideFlags: 0

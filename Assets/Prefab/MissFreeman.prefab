@@ -14422,7 +14422,7 @@ MonoBehaviour:
   countHealth: 938630
   maxCountHealth: 0
   deathSounds:
-  - {fileID: 8300000, guid: a3cd2012d56b3a5448ffffb13f6c6678, type: 3}
+  - {fileID: 8300000, guid: 893026767aef4d04c9ba150833748068, type: 3}
   isActive: 1
   damageDelay: 1
   size: 2
@@ -14430,9 +14430,9 @@ MonoBehaviour:
   damage: 10
   power: 14232.962
   defaultSpeed: 0
-  attackSound: {fileID: 8300000, guid: c43c842a9b3aac34fa8d9886e8b67f3e, type: 3}
+  attackSound: {fileID: 8300000, guid: 34e6e77607aab6a41bfe73c97692f420, type: 3}
   roarSounds:
-  - {fileID: 8300000, guid: 7ae95ec3c62e4eb41938fc5334142207, type: 3}
+  - {fileID: 8300000, guid: 72eaa286ff1bff1479a389b497f5bb6a, type: 3}
   myNameIs: Miss Freeman
 --- !u!54 &54833981383010288
 Rigidbody:
@@ -21109,7 +21109,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3961024258429165821}
   - component: {fileID: 2509867683649909125}
-  - component: {fileID: 3510115321846351466}
   m_Layer: 9
   m_Name: Stegosaurus
   m_TagString: Creature
@@ -21155,173 +21154,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3510115321846351466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9198712196663461421}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db3a2f802069c6469e5de28117b43c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useAI: 0
-  pathEditor: []
-  nextPath: 0
-  targetEditor: []
-  bodyTexture: 0
-  eyesTexture: 0
-  health: 100
-  water: 100
-  food: 100
-  stamina: 100
-  damageMultiplier: 1
-  armorMultiplier: 1
-  animSpeed: 1
-  herbivorous: 1
-  canAttack: 1
-  canHeadAttack: 0
-  canTailAttack: 1
-  canWalk: 1
-  canJump: 0
-  canFly: 0
-  canSwim: 0
-  lowAltitude: 0
-  canInvertBody: 0
-  baseMass: 3100
-  ang_T: 0.025
-  crouch_Max: 1.5
-  yaw_Max: 25
-  pitch_Max: 10
-  body: {fileID: 0}
-  lod: {fileID: 0}
-  anm: {fileID: 2509867683649909125}
-  source:
-  - {fileID: 0}
-  - {fileID: 0}
-  rend:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1304336479498165100}
-  skin:
-  - {fileID: 2800000, guid: adf5eb9bd30fd3d4b9cf6ec5d84e1d7a, type: 3}
-  - {fileID: 2800000, guid: 335ccbe76496b6642be1ac3de09568bc, type: 3}
-  - {fileID: 2800000, guid: a0c54df15ff22c64a92fb57d42a4aad1, type: 3}
-  eyes:
-  - {fileID: 2800000, guid: 0749ffe3e19e141489caff4cfdee7ff8, type: 3}
-  - {fileID: 2800000, guid: e44170da555f4d5419bfc19eae61fd78, type: 3}
-  - {fileID: 2800000, guid: 2c60a3361e2eaf14da9b552dc5b1620e, type: 3}
-  - {fileID: 2800000, guid: 7568b84bb9fe4e2448b9a4af2a6ab881, type: 3}
-  - {fileID: 2800000, guid: 5845805cc9b407446939267521b931df, type: 3}
-  - {fileID: 2800000, guid: 136cf5ae53f132b4f9c15d8d830ee18b, type: 3}
-  - {fileID: 2800000, guid: d973c9172cd1edf4ca621ed6555768d1, type: 3}
-  - {fileID: 2800000, guid: efc24bc706fc63041aa29ff309fe335a, type: 3}
-  - {fileID: 2800000, guid: 3ec19de5cec51bd4d96a8bb727625d01, type: 3}
-  - {fileID: 2800000, guid: bd50a80bf79805d41856b2c58ccd826b, type: 3}
-  - {fileID: 2800000, guid: 6520e1abf36abb54e8ba6909ec3a4bc9, type: 3}
-  - {fileID: 2800000, guid: b54283945f2b91b4fae72a6264a7b264, type: 3}
-  - {fileID: 2800000, guid: b204a159b445efa4bb1212392e67316c, type: 3}
-  - {fileID: 2800000, guid: f26fff52d1ee9e2488a0a01344706b76, type: 3}
-  - {fileID: 2800000, guid: 560f5cfd85a3a6541aa4cc1dd5b4b775, type: 3}
-  - {fileID: 2800000, guid: 391f6d09dc418914e906ac1fc19df7c9, type: 3}
-  Head: {fileID: 8760243139141862408}
-  main: {fileID: 0}
-  isActive: 0
-  isVisible: 0
-  isDead: 0
-  isOnGround: 0
-  isOnWater: 0
-  isInWater: 0
-  isConstrained: 0
-  isOnLevitation: 0
-  onAttack: 0
-  onJump: 0
-  onCrouch: 0
-  onReset: 0
-  onInvert: 0
-  onHeadMove: 0
-  onAutoLook: 0
-  onTailAttack: 0
-  rndX: 0
-  rndY: 0
-  rndMove: 0
-  rndIdle: 0
-  loop: 31
-  behavior: 
-  specie: Steg
-  objTGT: {fileID: 0}
-  objCOL: {fileID: 0}
-  headPos: {x: 0, y: 0, z: 0}
-  posCOL: {x: 0, y: 0, z: 0}
-  posTGT: {x: 0, y: 0, z: 0}
-  lookTGT: {x: 0, y: 0, z: 0}
-  boxscale: {x: 0.68121284, y: 1.6619756, z: 3.242086}
-  normal: {x: 0, y: 0, z: 0}
-  angTGT: {x: 0, y: 0, z: 0, w: 1}
-  normAng: {x: 0, y: 0, z: 0, w: 1}
-  currframe: 0
-  lastframe: 0
-  lastHit: 0
-  crouch: 0
-  spineX: 0
-  spineY: 0
-  headX: 0
-  headY: 0
-  pitch: 0
-  roll: 0
-  reverse: 0
-  posY: 0
-  waterY: -65536
-  withersSize: 2.2539706
-  size: 0
-  speed: 0
-  behaviorCount: 0
-  distTGT: 0
-  delta: 0
-  actionDist: 0
-  angleAdd: 0
-  avoidDelta: 0
-  avoidAdd: 0
-  Spine0: {fileID: 3717146278705810331}
-  Spine1: {fileID: 8707689891785462080}
-  Spine2: {fileID: 5872028704756384320}
-  Spine3: {fileID: 839643370363299012}
-  Spine4: {fileID: 3465984436754319032}
-  Neck0: {fileID: 8072949480645631507}
-  Neck1: {fileID: 6766592155527852063}
-  Neck2: {fileID: 6229900291572294103}
-  Neck3: {fileID: 3567989253195435756}
-  Tail0: {fileID: 2723385904324185783}
-  Tail1: {fileID: 2960216402218977153}
-  Tail2: {fileID: 1582233938190763090}
-  Tail3: {fileID: 5237452916263053822}
-  Tail4: {fileID: 3987226632107137266}
-  Tail5: {fileID: 4044479749558567321}
-  Left_Arm0: {fileID: 3146191482103768176}
-  Right_Arm0: {fileID: 2391936279579190796}
-  Left_Arm1: {fileID: 7066535219414584385}
-  Right_Arm1: {fileID: 4890963643456106611}
-  Left_Hand: {fileID: 2241365641158010314}
-  Right_Hand: {fileID: 7046612956428907460}
-  Left_Hips: {fileID: 5728038408307285084}
-  Right_Hips: {fileID: 5569147488044949920}
-  Left_Leg: {fileID: 1504230012274079237}
-  Right_Leg: {fileID: 4050164637361378624}
-  Left_Foot: {fileID: 6240379567078391599}
-  Right_Foot: {fileID: 1907362477231778315}
-  Waterflush: {fileID: 8300000, guid: abdd9ee77d0620341977b1d42cbb270c, type: 3}
-  Hit_jaw: {fileID: 8300000, guid: 2cdeb47744b25e348ba11efab424fde4, type: 3}
-  Hit_head: {fileID: 8300000, guid: b0659bba43eb86f4dab034dd1803e372, type: 3}
-  Hit_tail: {fileID: 8300000, guid: c4748159a2d67d540ab8ad33bda91b31, type: 3}
-  Medstep: {fileID: 8300000, guid: 781cebaba2798404e9c5e265b45c85bc, type: 3}
-  Medsplash: {fileID: 8300000, guid: 2ccec36a78016804691705dbd48ff66d, type: 3}
-  Idleherb: {fileID: 8300000, guid: 30b506deea06d2f408ca1d94348b4045, type: 3}
-  Sniff1: {fileID: 8300000, guid: 8d3910f04fdbd5a4d8bbba4b17d8faf1, type: 3}
-  Chew: {fileID: 8300000, guid: 948226ec7966d0a4480107f99777e9c8, type: 3}
-  Largestep: {fileID: 8300000, guid: a2bf8fefb1d8bd54cbfa5dfb4051560a, type: 3}
-  Largesplash: {fileID: 8300000, guid: aa9fe390bef187246997f611b9b4cebf, type: 3}
-  Steg1: {fileID: 8300000, guid: 72eaa286ff1bff1479a389b497f5bb6a, type: 3}
-  Steg2: {fileID: 8300000, guid: 893026767aef4d04c9ba150833748068, type: 3}
-  Steg3: {fileID: 8300000, guid: 2b302964d5241624e932fdc6eb5da4ba, type: 3}

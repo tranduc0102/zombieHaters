@@ -120,6 +120,8 @@ public class SurviviorContent : UIScrollCell
     private GameObject selecteObj;
     [SerializeField]
     private GameObject selectedText;
+    [SerializeField]
+    private Text txtNotif;
     private void Start()
     {
         SetUpSelected(DataLoader.Instance.survivorHumansSelected?.ToList());
@@ -546,8 +548,12 @@ public class SurviviorContent : UIScrollCell
         }
         if (check)
         {
-            if (GameManager.instance.survivors.Count < 3) return;
-            Debug.LogError("X1");
+            if (GameManager.instance.survivors.Count < 3)
+            {
+                txtNotif.text = "Min size selected : 2 survivor";
+                txtNotif.DOFade(1f, 1f).SetLoops(2, LoopType.Yoyo);
+                return;
+            }
             if (GameManager.instance != null)
             {
                 var spawned = GameManager.instance.survivors.FirstOrDefault(s => s.heroType == type);
@@ -562,8 +568,6 @@ public class SurviviorContent : UIScrollCell
         {
             if (GameManager.instance.survivors.Count < 4)
             {
-                Debug.LogError("X2");
-                Debug.LogError(GameManager.instance.survivors.Count); 
                 if (GameManager.instance != null)
                 {
                     bool alreadySpawned = GameManager.instance.survivors.Any(s => (int)s.heroType == heroIndex);
@@ -586,6 +590,11 @@ public class SurviviorContent : UIScrollCell
                         }
                     }
                 }
+            }
+            else
+            {
+                txtNotif.text = "Max size selected : 4 survivor";
+                txtNotif.DOFade(1f, 1f).SetLoops(2, LoopType.Yoyo);
             }
         }
         DOVirtual.DelayedCall(0.1f, delegate

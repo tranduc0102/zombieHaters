@@ -19289,7 +19289,7 @@ MonoBehaviour:
   countHealth: 2534990
   maxCountHealth: 0
   deathSounds:
-  - {fileID: 8300000, guid: 5081d3ce0b0b0244c9a71768d1d6ffd6, type: 3}
+  - {fileID: 8300000, guid: 0040e961a0388f54eb3c1d85bce8775f, type: 3}
   isActive: 1
   damageDelay: 1
   size: 2
@@ -19297,9 +19297,9 @@ MonoBehaviour:
   damage: 10
   power: 78485
   defaultSpeed: 0
-  attackSound: {fileID: 8300000, guid: 1aeb68acb7500da489baee53369a69d5, type: 3}
+  attackSound: {fileID: 8300000, guid: 34e6e77607aab6a41bfe73c97692f420, type: 3}
   roarSounds:
-  - {fileID: 8300000, guid: 08dd8a6d6c109384e9068628f3f293cf, type: 3}
+  - {fileID: 8300000, guid: f67689bf18e2e0948842aedcafb2b2bf, type: 3}
   myNameIs: Little Tony
 --- !u!54 &54671420918816406
 Rigidbody:
@@ -20488,7 +20488,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2344128334341809467}
   - component: {fileID: 3969624549750790061}
-  - component: {fileID: 2006924241985965642}
   m_Layer: 9
   m_Name: Spinosaurus
   m_TagString: Creature
@@ -20534,167 +20533,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2006924241985965642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4810472351644036042}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 798353c40807f994ca34742b52fdb465, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useAI: 0
-  pathEditor: []
-  nextPath: 0
-  targetEditor: []
-  bodyTexture: 0
-  eyesTexture: 0
-  health: 100
-  water: 100
-  food: 100
-  stamina: 100
-  damageMultiplier: 1
-  armorMultiplier: 1
-  animSpeed: 1
-  herbivorous: 0
-  canAttack: 1
-  canHeadAttack: 0
-  canTailAttack: 0
-  canWalk: 1
-  canJump: 0
-  canFly: 0
-  canSwim: 0
-  lowAltitude: 0
-  canInvertBody: 0
-  baseMass: 6500
-  ang_T: 0.035
-  crouch_Max: 4
-  yaw_Max: 25
-  pitch_Max: 12
-  body: {fileID: 0}
-  lod: {fileID: 0}
-  anm: {fileID: 3969624549750790061}
-  source:
-  - {fileID: 0}
-  - {fileID: 0}
-  rend:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 2659236530586719368}
-  skin:
-  - {fileID: 2800000, guid: e13c5c7125059704aa907cb3694ab364, type: 3}
-  - {fileID: 2800000, guid: bd2e236dbdb491041bd8a6044d077b1b, type: 3}
-  - {fileID: 2800000, guid: 837eb8ad1519cd3499006fb58a01484c, type: 3}
-  eyes:
-  - {fileID: 2800000, guid: 0749ffe3e19e141489caff4cfdee7ff8, type: 3}
-  - {fileID: 2800000, guid: e44170da555f4d5419bfc19eae61fd78, type: 3}
-  - {fileID: 2800000, guid: 2c60a3361e2eaf14da9b552dc5b1620e, type: 3}
-  - {fileID: 2800000, guid: 7568b84bb9fe4e2448b9a4af2a6ab881, type: 3}
-  - {fileID: 2800000, guid: 5845805cc9b407446939267521b931df, type: 3}
-  - {fileID: 2800000, guid: 136cf5ae53f132b4f9c15d8d830ee18b, type: 3}
-  - {fileID: 2800000, guid: d973c9172cd1edf4ca621ed6555768d1, type: 3}
-  - {fileID: 2800000, guid: efc24bc706fc63041aa29ff309fe335a, type: 3}
-  - {fileID: 2800000, guid: 3ec19de5cec51bd4d96a8bb727625d01, type: 3}
-  - {fileID: 2800000, guid: bd50a80bf79805d41856b2c58ccd826b, type: 3}
-  - {fileID: 2800000, guid: 6520e1abf36abb54e8ba6909ec3a4bc9, type: 3}
-  - {fileID: 2800000, guid: b54283945f2b91b4fae72a6264a7b264, type: 3}
-  - {fileID: 2800000, guid: b204a159b445efa4bb1212392e67316c, type: 3}
-  - {fileID: 2800000, guid: f26fff52d1ee9e2488a0a01344706b76, type: 3}
-  - {fileID: 2800000, guid: 560f5cfd85a3a6541aa4cc1dd5b4b775, type: 3}
-  - {fileID: 2800000, guid: 391f6d09dc418914e906ac1fc19df7c9, type: 3}
-  Head: {fileID: 1281778814118429117}
-  main: {fileID: 0}
-  isActive: 0
-  isVisible: 0
-  isDead: 0
-  isOnGround: 0
-  isOnWater: 0
-  isInWater: 0
-  isConstrained: 0
-  isOnLevitation: 0
-  onAttack: 0
-  onJump: 0
-  onCrouch: 0
-  onReset: 0
-  onInvert: 0
-  onHeadMove: 0
-  onAutoLook: 0
-  onTailAttack: 0
-  rndX: -3
-  rndY: -1
-  rndMove: 0
-  rndIdle: 0
-  loop: 100
-  behavior: Player
-  specie: Spino
-  objTGT: {fileID: 0}
-  objCOL: {fileID: 0}
-  headPos: {x: 0, y: 0, z: 0}
-  posCOL: {x: 0, y: 0, z: 0}
-  posTGT: {x: 0, y: 0, z: 0}
-  lookTGT: {x: 0, y: 0, z: 0}
-  boxscale: {x: 1.1690668, y: 2.2040849, z: 5.7539325}
-  normal: {x: 0.1865708, y: 0.97967577, z: 0.07366759}
-  angTGT: {x: 0, y: 0, z: 0, w: 1}
-  normAng: {x: 0, y: 0, z: 0, w: 1}
-  currframe: 13
-  lastframe: 0
-  lastHit: 0
-  crouch: 0
-  spineX: 0
-  spineY: 0
-  headX: -2.9831266
-  headY: -0.9943743
-  pitch: 0
-  roll: 0
-  reverse: 0
-  posY: 253.00827
-  waterY: 255.55463
-  withersSize: 3.2298884
-  size: 0
-  speed: 0.24999999
-  behaviorCount: 0
-  distTGT: 0
-  delta: 175.50008
-  actionDist: 0
-  angleAdd: 0
-  avoidDelta: 0
-  avoidAdd: 0
-  Spine0: {fileID: 8014028094236784345}
-  Spine1: {fileID: 6800903068830650725}
-  Spine2: {fileID: 3967907977443618870}
-  Neck0: {fileID: 4478219385617562291}
-  Neck1: {fileID: 5889632424074592474}
-  Neck2: {fileID: 1482006022206371576}
-  Tail2: {fileID: 6005390418976759799}
-  Tail3: {fileID: 8297435471240186733}
-  Tail4: {fileID: 7963353220177987857}
-  Tail5: {fileID: 5619915738964598713}
-  Tail6: {fileID: 4470929973972487728}
-  Left_Hips: {fileID: 4553947482027100480}
-  Right_Hips: {fileID: 4671660592741517948}
-  Left_Leg: {fileID: 6201741695183607869}
-  Right_Leg: {fileID: 5519599164081513143}
-  Left_Foot0: {fileID: 8046968418840894172}
-  Right_Foot0: {fileID: 4718459065076637063}
-  Waterflush: {fileID: 8300000, guid: abdd9ee77d0620341977b1d42cbb270c, type: 3}
-  Hit_jaw: {fileID: 8300000, guid: 2cdeb47744b25e348ba11efab424fde4, type: 3}
-  Hit_head: {fileID: 8300000, guid: b0659bba43eb86f4dab034dd1803e372, type: 3}
-  Hit_tail: {fileID: 8300000, guid: c4748159a2d67d540ab8ad33bda91b31, type: 3}
-  Bigstep: {fileID: 8300000, guid: aa04c0f697c721f438fc9361cadbb6d1, type: 3}
-  Largesplash: {fileID: 8300000, guid: aa9fe390bef187246997f611b9b4cebf, type: 3}
-  Largestep: {fileID: 8300000, guid: a2bf8fefb1d8bd54cbfa5dfb4051560a, type: 3}
-  Idlecarn: {fileID: 8300000, guid: 09fa44cb202a00e4d9d249d2ae99c1d7, type: 3}
-  Bite: {fileID: 8300000, guid: 34e6e77607aab6a41bfe73c97692f420, type: 3}
-  Swallow: {fileID: 8300000, guid: 850c96bc8498eaa4a8d5e9789ab8ee22, type: 3}
-  Sniff1: {fileID: 8300000, guid: 8d3910f04fdbd5a4d8bbba4b17d8faf1, type: 3}
-  Spino1: {fileID: 8300000, guid: f67689bf18e2e0948842aedcafb2b2bf, type: 3}
-  Spino2: {fileID: 8300000, guid: 28f0a59d6d376a64aa9fe1a19a4d453a, type: 3}
-  Spino3: {fileID: 8300000, guid: 0040e961a0388f54eb3c1d85bce8775f, type: 3}
-  Spino4: {fileID: 8300000, guid: df109f91cf003aa4daf2d3ec8cc1ecfd, type: 3}
 --- !u!1 &4960203242663360840
 GameObject:
   m_ObjectHideFlags: 0
