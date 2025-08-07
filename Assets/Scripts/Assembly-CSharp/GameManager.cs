@@ -489,7 +489,7 @@ public class GameManager : MonoBehaviour
         {
             UIController.instance.scrollControllers.survivorsController.UpdateAllSelected(selectedHeroIndices);
         });
-        Debug.LogError(PlayerPrefs.GetString("SelectedSurvivor"));
+        Debug.LogWarning(PlayerPrefs.GetString("SelectedSurvivor"));
         cameraTarget.transform.position = position;
 		cameraTarget.enabled = true;
 		if (!isTutorialNow && currentGameMode == GameModes.Idle)
@@ -507,7 +507,7 @@ public class GameManager : MonoBehaviour
 		{
 			UnityEngine.Object.Destroy(TransformParentManager.Instance.heroes.GetChild(i).gameObject);
 		}
-		Debug.LogError("X2");
+		Debug.LogWarning("X2");
 	}
 
 	public void IncreaseGameTime()
